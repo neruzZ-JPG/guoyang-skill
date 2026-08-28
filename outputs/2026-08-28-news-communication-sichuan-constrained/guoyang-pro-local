@@ -1,0 +1,2 @@
+#!/bin/sh
+exec node /Users/bytedance/fun/kaog/guoyang-pro/cli/dist/index.js "$@"

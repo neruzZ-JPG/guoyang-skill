@@ -1,0 +1,8 @@
+{
+  "schema": "guoyang-search-run-failure/v1",
+  "startedAt": "2026-08-28T07:42:47.757Z",
+  "finishedAt": "2026-08-28T07:42:47.770Z",
+  "profilePath": "/Users/bytedance/fun/kaog/guoyang-skill/outputs/2026-08-28-news-communication-sichuan-deep/profile.json",
+  "outputDirectory": "/Users/bytedance/fun/kaog/guoyang-skill/outputs/2026-08-28-news-communication-sichuan-deep/run-2",
+  "error": "--previous-run 的画像与当前规范化画像不一致；画像变化时请开始新的检索链路"
+}

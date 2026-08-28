@@ -1,0 +1,600 @@
+{
+  "schema": "guoyang-report-analysis/v1",
+  "unassessedPolicy": "error",
+  "headline": "深扫覆盖四川全域 42 个候选，但应届新闻传播高匹配岗位仍集中在 1 个职能宣传机会",
+  "executiveSummary": "本次重新扫描把查询预算从 24 条提高到 48 条，单次国聘扫描上限提高到 5000，并覆盖成都及四川其余 20 个地市州。累计得到 42 个去重候选，较上一链路的 16 个宽口径候选明显增加；但新增量主要是中国移动体系在雅安、阿坝、甘孜的社招项目经理、维护和市场运营岗位，普遍要求 2 年以上经验。面向“硕士、新闻传播、应届、四川、校招”的有效结论没有被数量扩张改变：中国航发四川燃气涡轮研究院“职能管理类”仍是当前唯一同时具有地点、学历、专业和校招正向证据的岗位。",
+  "searchAssessment": "深扫先取消学历和招聘类型限制，系统查询成都的专业目录别名与宣传、党群、党建、企业文化、品牌、市场、新媒体、内容、编辑、文案、策划、舆情、公关和文秘等职责词；随后逐一扫描四川其余 20 个地市州，并对绵阳、德阳、宜宾和泸州补查宣传岗位。48 条查询全部执行成功，累计扫描记录约 25 万条。扩大范围带来 14 个新岗位，但全部属于社招或专业不符岗位。停止原因是已覆盖计划中的四川全部城市并达到 48 条预算，而不是认定其他平台或未来批次不存在机会。",
+  "marketObservations": [
+    {
+      "title": "岗位总数增加不等于可投岗位增加",
+      "body": "取消招聘类型并逐城市扫描后，候选池从 28 个增至 42 个，但新增岗位主要要求 2 年以上通信行业经验，属于社招。对当前应届画像而言，这些岗位只能作为未来职业路径参考，不能加入本轮投递清单。",
+      "evidenceKeys": [
+        "china-mobile:6a2166d4-7622-40d3-b1a4-8f85048859b9",
+        "china-mobile:13c431eb-c960-496a-a26b-b4c2a07bbdcd",
+        "china-mobile:549be6f3-a012-4db3-a466-3203b215eab7"
+      ]
+    },
+    {
+      "title": "四川当前校招供给高度集中于成都",
+      "body": "成都宽扫描返回了校招与社招混合岗位；绵阳只补充了航空试验技术岗位，其余多数城市未返回岗位。雅安、阿坝和甘孜的增量来自中国移动社会招聘，未形成新的新闻传播校招机会。",
+      "evidenceKeys": [
+        "iguopin:215130492788278643",
+        "iguopin:215130421334115680",
+        "china-mobile:13b83086-a283-48bf-b5b2-0950a96a931c"
+      ]
+    },
+    {
+      "title": "传播专业的有效入口仍是跨行业职能岗",
+      "body": "当前唯一明确接受新闻与传播类专业的岗位来自航空制造科研院所的职能管理大类，说明四川国央企求职应重点关注党群宣传、企业文化、综合管理和品牌传播，而不能只盯传媒行业或标题中的“新闻”。",
+      "evidenceKeys": [
+        "iguopin:215130492788278643"
+      ]
+    },
+    {
+      "title": "社招市场显示可积累的迁移能力",
+      "body": "雅安、阿坝和甘孜的营销或拓展项目经理岗位反复要求市场分析、结构化表达、商务沟通和文案撰写，同时设置 2 年以上行业经验门槛。这些要求可反向指导应届阶段积累项目策划、数据分析和行业表达能力。",
+      "evidenceKeys": [
+        "china-mobile:e12dfe32-0d0f-44c8-a565-fdddcd90ccc6",
+        "china-mobile:549be6f3-a012-4db3-a466-3203b215eab7"
+      ]
+    }
+  ],
+  "customSections": [
+    {
+      "title": "为什么新版仍只推荐 1 个岗位",
+      "paragraphs": [
+        "本次 42 个候选中，只有 1 个岗位同时满足校招、四川、硕士层级和新闻传播专业正向证据。其余候选分为四类：明确技术或工程专业校招、软件开发校招但官方列表缺少专业详情、专业不符的实习或人力岗位，以及要求工作经验的社会招聘。",
+        "扩大扫描的价值是确认“少”来自当前可检索市场供给和硬条件，而不是因为上一轮只搜了少量关键词。报告不把社招、专业不符岗位包装成“可以尝试”，以免增加无效网申。"
+      ],
+      "bullets": [
+        "技术与工程校招：航空、电子信息、软件开发、建筑、水利等专业硬门槛明显。",
+        "社会招聘：成都、雅安、阿坝、甘孜的中国移动及招商银行岗位要求行业经验。",
+        "类型或专业异常：个别国聘记录结构化为校招，但正文写明实习；以正文和官方详情为准。",
+        "唯一高匹配：职能管理类明确包含新闻与传播类、新闻与宣传方向。"
+      ],
+      "evidenceKeys": [
+        "iguopin:215130492788278643",
+        "iguopin:215710318272184429",
+        "iguopin:215471642812352073",
+        "china-mobile:13c431eb-c960-496a-a26b-b4c2a07bbdcd"
+      ]
+    },
+    {
+      "title": "下一步不应继续机械扩词",
+      "paragraphs": [
+        "本轮已覆盖专业目录、职责词、招聘类型放宽和四川全部城市。继续增加近义词大概率重复扫描相同来源。更有效的下一步是等待新一批公告、增加新的招聘来源，或在用户明确同意后放宽地域。"
+      ],
+      "bullets": [
+        "对当前目标岗位立即投递，并持续核验中国航发同批次其他单位。",
+        "每周复查一次即可，重点观察新发布而非重复同一时点。",
+        "如接受省外，可新开成渝、西安、武汉、北京方向检索，显著扩大央企总部和研究院样本。",
+        "如坚持四川，可同步关注地方国企官网、四川人才网及各集团官方公众号，弥补当前 CLI 来源覆盖。"
+      ],
+      "evidenceKeys": [
+        "iguopin:215130492788278643"
+      ]
+    }
+  ],
+  "actionPlan": [
+    "立即核验并投递中国航发四川燃气涡轮研究院“职能管理类”，确认毕业届次、专业代码、政治面貌、工作地点分配和用工性质。",
+    "制作一版国央企职能宣传定向简历：突出新闻采写、公文材料、品牌或活动策划、舆情分析和跨部门协同，并为每项经历提供量化结果。",
+    "建立每周一次的复查节奏，关键词优先使用“新闻与传播、新闻与宣传、党群、党建、企业文化、综合管理”，重点城市为成都和绵阳。",
+    "关注中国航发、中国移动四川公司、四川省属国企和成都地方国企的官方招聘渠道，不仅依赖聚合平台。",
+    "若两周内仍无新增且愿意扩大地域，优先把范围扩至重庆和西安；如果不愿跨省，则把准备重心转向目标岗位笔试、材料写作和结构化面试。"
+  ],
+  "caveats": [
+    "用户未提供毕业年份，所有岗位都必须在官方页面核验应届届次。",
+    "国聘在全部相关查询中达到扫描上限，当前结果不是全量岗位。",
+    "24365 来源在本轮持续报错，覆盖不完整；泸州宣传查询中的国聘来源也出现失败。",
+    "取消招聘类型的查询用于发现漏标岗位，不代表社招岗位符合用户的校招目标。",
+    "中国移动社会招聘的市场类岗位虽有能力迁移价值，但明确要求工作经验，不适合应届身份直接投递。",
+    "报告的岗位优先级是求职安排建议，不代表录取概率或官方评价。"
+  ],
+  "followUpQueries": [
+    {
+      "purpose": "下次复查中国航发四川燃气涡轮研究院职能宣传岗位是否新增或更新",
+      "filters": {
+        "enterprise": "中国航发四川燃气涡轮研究院",
+        "keyword": "新闻与宣传",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "purpose": "复查成都新发布的党群与企业文化校招岗位",
+      "filters": {
+        "location": "成都",
+        "keyword": "党群",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "purpose": "复查绵阳科研院所的新闻与传播类校招岗位",
+      "filters": {
+        "location": "绵阳",
+        "major": "新闻与传播",
+        "recruitType": "校招"
+      }
+    }
+  ],
+  "positionAssessments": [
+    {
+      "stableKey": "iguopin:215130492788278643",
+      "include": true,
+      "bucket": "priority",
+      "priority": 93,
+      "confidence": "high",
+      "reasons": [
+        "学历明确为硕士，与用户学历匹配",
+        "工作地点为成都，符合四川意向",
+        "招聘类型为校招",
+        "专业要求明确包含新闻与传播类",
+        "需求方向明确写有新闻与宣传",
+        "在专业词、宣传、党建和市场营销等多条独立查询中重复命中"
+      ],
+      "risks": [
+        "职能管理属于大类招聘，具体分配方向需向招聘方核验",
+        "用户毕业年份未提供，必须确认届次范围",
+        "用工性质未明确",
+        "梯队与行业由母集团识别结果继承，需以具体研究院公告为准"
+      ],
+      "nextAction": "今天打开来源页核验届次、专业代码和分配方向；符合后 48 小时内提交定向简历。"
+    },
+    {
+      "stableKey": "iguopin:215130421334115680",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": [
+        "绵阳、硕士和校招条件匹配"
+      ],
+      "risks": [
+        "专业限定智能科学、控制、机械、电子和自动化",
+        "岗位为航空试验技术方向，与新闻传播不符"
+      ],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "china-mobile:6a2166d4-7622-40d3-b1a4-8f85048859b9",
+      "include": false,
+      "bucket": "observe",
+      "priority": 18,
+      "confidence": "high",
+      "reasons": [
+        "营销项目经理的市场分析和文字表达能力具有一定迁移性"
+      ],
+      "risks": [
+        "属于社会招聘",
+        "要求 2 年以上通信行业市场运营经验",
+        "专业偏 IT、通信、数智工程或市场营销"
+      ],
+      "nextAction": "作为未来职业路径参考，不适合当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:13c431eb-c960-496a-a26b-b4c2a07bbdcd",
+      "include": false,
+      "bucket": "observe",
+      "priority": 18,
+      "confidence": "high",
+      "reasons": [
+        "营销项目经理职责包含市场分析和经营材料"
+      ],
+      "risks": [
+        "属于社会招聘",
+        "要求 2 年以上通信行业市场运营经验",
+        "岗位位于阿坝且专业方向不以新闻传播为主"
+      ],
+      "nextAction": "不纳入当前校招清单。"
+    },
+    {
+      "stableKey": "china-mobile:e12dfe32-0d0f-44c8-a565-fdddcd90ccc6",
+      "include": false,
+      "bucket": "observe",
+      "priority": 16,
+      "confidence": "high",
+      "reasons": [
+        "职责强调结构化表达、商务沟通和文案撰写"
+      ],
+      "risks": [
+        "属于社会招聘",
+        "要求 2 年以上通信行业售前或项目拓展经验",
+        "专业与证书要求偏通信和项目管理"
+      ],
+      "nextAction": "作为能力发展参考，不适合应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:549be6f3-a012-4db3-a466-3203b215eab7",
+      "include": false,
+      "bucket": "observe",
+      "priority": 17,
+      "confidence": "high",
+      "reasons": [
+        "岗位职责包含市场分析、计划编制和规范文件撰写"
+      ],
+      "risks": [
+        "属于社会招聘",
+        "要求 2 年以上通信行业市场运营经验",
+        "地点为甘孜且专业方向偏市场营销和通信"
+      ],
+      "nextAction": "不纳入当前校招清单。"
+    },
+    {
+      "stableKey": "iguopin:213585935390999310",
+      "include": false,
+      "bucket": "observe",
+      "priority": 3,
+      "confidence": "high",
+      "reasons": [
+        "专业目录中包含新闻传播学和新闻与传播"
+      ],
+      "risks": [
+        "岗位为融资租赁公司副总经理社会招聘",
+        "管理层岗位明显不适合应届毕业生",
+        "职责和资格以金融经营管理为核心"
+      ],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215471642812352073",
+      "include": false,
+      "bucket": "observe",
+      "priority": 0,
+      "confidence": "high",
+      "reasons": [
+        "地点在成都"
+      ],
+      "risks": [
+        "正文明确为实习岗位",
+        "专业限定医药、化学和生物方向",
+        "与用户校招及新闻传播目标不符"
+      ],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "cmb:77B60DA8-E4C9-4B14-8DCA-BA7167FDD0D2",
+      "include": false,
+      "bucket": "observe",
+      "priority": 10,
+      "confidence": "medium",
+      "reasons": [
+        "地点和校招类型匹配"
+      ],
+      "risks": [
+        "岗位为测试技术开发方向",
+        "官方列表未提供学历和专业详情",
+        "没有新闻传播匹配证据"
+      ],
+      "nextAction": "无软件测试背景时不投递。"
+    },
+    {
+      "stableKey": "china-mobile:2685857a-947c-4830-80fc-ef490127df22",
+      "include": false,
+      "bucket": "observe",
+      "priority": 1,
+      "confidence": "high",
+      "reasons": ["来源为中国移动官方招聘站"],
+      "risks": ["属于社会招聘并要求五年以上 AIDC 交付经验", "专业限定通信、计算机、电子信息及机电能源方向"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:3a8aca2c-9b6f-4e19-85e4-e9495ee918da",
+      "include": false,
+      "bucket": "observe",
+      "priority": 1,
+      "confidence": "high",
+      "reasons": ["岗位涉及方案撰写和客户沟通"],
+      "risks": ["属于社会招聘并要求五年以上 AIDC 深化设计经验", "专业和技术要求为电气、暖通、建筑智能化及机电"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:a6db4119-dd30-4233-898a-63c51fb094fd",
+      "include": false,
+      "bucket": "observe",
+      "priority": 1,
+      "confidence": "high",
+      "reasons": ["来源为中国移动官方招聘站"],
+      "risks": ["属于社会招聘并要求五年以上相关经验", "岗位为 AIDC 机电深化设计，与新闻传播不符"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:c2caee52-3c48-41ed-bd40-8d03563d95ec",
+      "include": false,
+      "bucket": "observe",
+      "priority": 1,
+      "confidence": "high",
+      "reasons": ["职责包含项目文档和跨方协调"],
+      "risks": ["属于社会招聘并要求五年以上数据中心项目管理经验", "要求技术专业和一级建造师等资格"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "cmb:F01500EF-69EB-45CD-BB84-0B8C9611D27A",
+      "include": false,
+      "bucket": "observe",
+      "priority": 8,
+      "confidence": "medium",
+      "reasons": ["地点和校招类型匹配"],
+      "risks": ["岗位为后端开发方向", "官方列表未提供专业详情且没有新闻传播匹配证据"],
+      "nextAction": "无后端开发经历时不投递。"
+    },
+    {
+      "stableKey": "cmb:11AA4F30-1F63-4D71-A380-3408FF7475F5",
+      "include": false,
+      "bucket": "observe",
+      "priority": 8,
+      "confidence": "medium",
+      "reasons": ["地点和校招类型匹配"],
+      "risks": ["岗位为前端开发方向", "官方列表未提供专业详情且没有新闻传播匹配证据"],
+      "nextAction": "无前端开发经历时不投递。"
+    },
+    {
+      "stableKey": "cmb:536E74A0-B154-406D-80D8-202D41725174",
+      "include": false,
+      "bucket": "observe",
+      "priority": 6,
+      "confidence": "high",
+      "reasons": ["地点在成都且来源为招商银行官方招聘站"],
+      "risks": ["属于社会招聘", "战略客户经理与当前新闻传播校招目标不一致"],
+      "nextAction": "不纳入当前校招清单。"
+    },
+    {
+      "stableKey": "cmb:C0FEF06C-A4A7-40A0-B2A8-A1638621CDD4",
+      "include": false,
+      "bucket": "observe",
+      "priority": 5,
+      "confidence": "high",
+      "reasons": ["地点在成都且来源为招商银行官方招聘站"],
+      "risks": ["属于社会招聘", "私人银行客户经理与当前新闻传播校招目标不一致"],
+      "nextAction": "不纳入当前校招清单。"
+    },
+    {
+      "stableKey": "cmb:4715F919-B8EE-475D-B24F-8684F6D092A0",
+      "include": false,
+      "bucket": "observe",
+      "priority": 5,
+      "confidence": "high",
+      "reasons": ["地点在成都且来源为招商银行官方招聘站"],
+      "risks": ["属于社会招聘", "零售信贷客户经理与当前新闻传播校招目标不一致"],
+      "nextAction": "不纳入当前校招清单。"
+    },
+    {
+      "stableKey": "cmb:EDC737AA-17CA-47C3-A0F3-19236090352C",
+      "include": false,
+      "bucket": "observe",
+      "priority": 5,
+      "confidence": "high",
+      "reasons": ["地点在成都且来源为招商银行官方招聘站"],
+      "risks": ["属于社会招聘", "财富客户经理与当前新闻传播校招目标不一致"],
+      "nextAction": "不纳入当前校招清单。"
+    },
+    {
+      "stableKey": "iguopin:215710318272184429",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["硕士、成都和校招条件匹配"],
+      "risks": ["专业明确为电子信息类", "职责要求算法、编程和信号处理能力"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215707454921506917",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["硕士、成都工作地点之一和校招条件匹配"],
+      "risks": ["专业限定计算机、电子信息、仪器和自动化", "职责要求信号处理及软硬件开发能力"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215131701502805363",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["硕士、四川和校招条件匹配"],
+      "risks": ["专业限定计算机、电子信息、网安、通信和信息资源管理", "需求方向以技术工作为主"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215130542398506355",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["硕士、成都和校招条件匹配"],
+      "risks": ["专业限定工业工程、机械和系统科学", "职责方向为数字化设计和数据治理"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215130351222130021",
+      "include": false,
+      "bucket": "observe",
+      "priority": 2,
+      "confidence": "high",
+      "reasons": ["硕士、成都和校招条件匹配"],
+      "risks": ["专业限定航空、机械、电气、自动化和智能科学", "与新闻传播专业不符"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215598571125211236",
+      "include": false,
+      "bucket": "observe",
+      "priority": 2,
+      "confidence": "high",
+      "reasons": ["硕士、成都和校招条件匹配"],
+      "risks": ["专业限定电气、动力、能源和自动化", "职责要求建筑能源技术能力"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215597606435291248",
+      "include": false,
+      "bucket": "observe",
+      "priority": 0,
+      "confidence": "high",
+      "reasons": ["工作地点为成都"],
+      "risks": ["学历明确要求博士", "专业和研究方向为建筑能源与人工智能"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215598212528996453",
+      "include": false,
+      "bucket": "observe",
+      "priority": 2,
+      "confidence": "high",
+      "reasons": ["地点和校招条件匹配"],
+      "risks": ["专业限定工程管理、工程造价和管理科学与工程", "职责为工程造价技术工作"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:215597867052564598",
+      "include": false,
+      "bucket": "observe",
+      "priority": 1,
+      "confidence": "high",
+      "reasons": ["地点和校招条件匹配"],
+      "risks": ["专业限定工程管理、结构、给排水和土木工程", "岗位需要长期住宿在项目上"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:214732495566931285",
+      "include": false,
+      "bucket": "observe",
+      "priority": 0,
+      "confidence": "high",
+      "reasons": ["工作地点为成都"],
+      "risks": ["属于社会招聘并要求相关工作经历", "专业限定法学、医学及相关方向"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "iguopin:215471213936379465",
+      "include": false,
+      "bucket": "observe",
+      "priority": 5,
+      "confidence": "high",
+      "reasons": ["地点和校招条件匹配，职责包含公文写作"],
+      "risks": ["专业明确要求人力资源管理相关专业", "要求中共党员且用工为合同制"],
+      "nextAction": "专业条件不匹配，不纳入投递。"
+    },
+    {
+      "stableKey": "iguopin:213586374735954702",
+      "include": false,
+      "bucket": "observe",
+      "priority": 1,
+      "confidence": "high",
+      "reasons": ["学历和四川工作地点匹配"],
+      "risks": ["属于社会招聘副总经理岗位", "要求三年以上金融行业经历、党员和法律职业资格"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "iguopin:213585587465093851",
+      "include": false,
+      "bucket": "observe",
+      "priority": 0,
+      "confidence": "high",
+      "reasons": ["学历和四川工作地点匹配"],
+      "risks": ["属于社会招聘", "岗位要求法学或金融专业、三年以上经历和法律职业资格"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "iguopin:215435373021496901",
+      "include": false,
+      "bucket": "observe",
+      "priority": 2,
+      "confidence": "high",
+      "reasons": ["硕士、成都工作地点之一和校招条件匹配"],
+      "risks": ["专业限定水利工程相关方向", "职责为水利工程设计"],
+      "nextAction": "不纳入投递。"
+    },
+    {
+      "stableKey": "china-mobile:13b83086-a283-48bf-b5b2-0950a96a931c",
+      "include": false,
+      "bucket": "observe",
+      "priority": 6,
+      "confidence": "high",
+      "reasons": ["工作地点为雅安"],
+      "risks": ["属于社会招聘", "要求两年以上通信装维经验且专业偏通信与市场营销"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:4ded3b6d-e2ca-4ba1-a66b-2797a7a11110",
+      "include": false,
+      "bucket": "observe",
+      "priority": 6,
+      "confidence": "high",
+      "reasons": ["工作地点为雅安"],
+      "risks": ["属于社会招聘", "要求两年以上通信装维营销经验"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:11383539-328b-4245-9fdf-19ed9b7924fa",
+      "include": false,
+      "bucket": "observe",
+      "priority": 5,
+      "confidence": "high",
+      "reasons": ["工作地点为阿坝"],
+      "risks": ["属于社会招聘", "要求两年以上通信装维营销经验"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:b2f35f0a-537c-48cc-bdf4-f58ad9d13b38",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["工作地点为阿坝"],
+      "risks": ["属于社会招聘", "要求两年以上通信工程管理经验和建造师资格"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:fc30dec7-0c45-4ab4-87e0-07a600090d06",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["工作地点为阿坝"],
+      "risks": ["属于社会招聘", "要求两年以上通信装维经验"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:067c3a81-b1c9-4597-b22f-1f0f9f1e4e12",
+      "include": false,
+      "bucket": "observe",
+      "priority": 15,
+      "confidence": "high",
+      "reasons": ["职责包含策划、商务沟通和文案撰写"],
+      "risks": ["属于社会招聘", "要求两年以上通信行业拓展经验且工作地点为甘孜"],
+      "nextAction": "作为能力参考，不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:506f128d-0768-40ae-b22b-8cd9f03aa51e",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["工作地点为甘孜"],
+      "risks": ["属于社会招聘", "要求两年以上通信装维营销经验"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:7cb3e9bc-c720-4107-aefa-55cc6447e258",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["工作地点为甘孜"],
+      "risks": ["属于社会招聘", "要求两年以上通信工程管理经验和建造师资格"],
+      "nextAction": "不纳入当前应届投递。"
+    },
+    {
+      "stableKey": "china-mobile:a6c8db60-1f5e-4a28-b969-6b4b3c59c7d8",
+      "include": false,
+      "bucket": "observe",
+      "priority": 4,
+      "confidence": "high",
+      "reasons": ["工作地点为甘孜"],
+      "risks": ["属于社会招聘", "要求两年以上通信装维经验"],
+      "nextAction": "不纳入当前应届投递。"
+    }
+  ]
+}

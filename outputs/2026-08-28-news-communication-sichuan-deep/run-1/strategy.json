@@ -1,0 +1,278 @@
+{
+  "schema": "guoyang-search-strategy/v1",
+  "objective": "对成都新闻传播及相邻职能开展深度扫描，识别被学历、招聘类型或专业简称过滤遗漏的岗位。",
+  "approach": "以成都为主要岗位市场，先比较无类型宽查询与校招宽查询，再用七种专业目录写法和十五种相邻职责词检索。除校招宽查询外暂不限制招聘类型，避免来源把校招标成未知、实习或其他类型；最终逐项按用户的校招目标审核。",
+  "hypotheses": [
+    "岗位可能因招聘类型未标注或分类偏差而被校招过滤遗漏",
+    "专业可能写作新闻与传播类、广告学、网络与新媒体或中国语言文学类",
+    "传播职能可能分布在宣传、党群、党建、企业文化、品牌、市场、内容和综合文字岗位",
+    "成都作为四川核心招聘城市，比省级地点检索能发现更多机会"
+  ],
+  "stopCondition": "完成成都宽池、专业目录和相邻职责的系统扫描；再依据新增岗位和企业分布决定是否向四川其他城市或目标企业扩展。",
+  "iteration": 1,
+  "queries": [
+    {
+      "id": "d1-chengdu-all-types",
+      "stage": "broad-diagnostic",
+      "purpose": "建立成都所有招聘类型的国央企岗位宽池，诊断类型过滤遗漏。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-chengdu-campus",
+      "stage": "broad-diagnostic",
+      "purpose": "建立成都明确标注校招的对照池。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "d1-major-news-and-communication",
+      "stage": "major-taxonomy",
+      "purpose": "用上一轮已验证有效的专业目录词检索。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻与传播",
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-major-news-communication-category",
+      "stage": "major-taxonomy",
+      "purpose": "覆盖新闻传播学类专业目录写法。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻传播学类",
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-major-journalism",
+      "stage": "major-taxonomy",
+      "purpose": "覆盖新闻学专业写法。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻学",
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-major-communication",
+      "stage": "major-taxonomy",
+      "purpose": "覆盖传播学专业写法。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "传播学",
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-major-advertising",
+      "stage": "major-taxonomy",
+      "purpose": "覆盖广告学相关品牌传播岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "广告学",
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-major-new-media",
+      "stage": "major-taxonomy",
+      "purpose": "覆盖网络与新媒体专业目录写法。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "网络与新媒体",
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-major-chinese-language",
+      "stage": "major-taxonomy",
+      "purpose": "发现同时接受中文与新闻传播背景的综合文字岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "中国语言文学",
+        "location": "成都"
+      }
+    },
+    {
+      "id": "d1-role-publicity",
+      "stage": "adjacent-role",
+      "purpose": "检索宣传职能岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "宣传"
+      }
+    },
+    {
+      "id": "d1-role-party-mass",
+      "stage": "adjacent-role",
+      "purpose": "检索党群工作岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "党群"
+      }
+    },
+    {
+      "id": "d1-role-party-building",
+      "stage": "adjacent-role",
+      "purpose": "检索党建与党务岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "党建"
+      }
+    },
+    {
+      "id": "d1-role-corporate-culture",
+      "stage": "adjacent-role",
+      "purpose": "检索企业文化传播岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "企业文化"
+      }
+    },
+    {
+      "id": "d1-role-brand",
+      "stage": "adjacent-role",
+      "purpose": "检索品牌管理与品牌传播岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "品牌"
+      }
+    },
+    {
+      "id": "d1-role-marketing",
+      "stage": "adjacent-role",
+      "purpose": "检索市场营销中可能偏传播策划的岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "市场营销"
+      }
+    },
+    {
+      "id": "d1-role-new-media",
+      "stage": "adjacent-role",
+      "purpose": "检索新媒体运营与内容岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "新媒体"
+      }
+    },
+    {
+      "id": "d1-role-converged-media",
+      "stage": "adjacent-role",
+      "purpose": "检索融媒体和全媒体岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "融媒体"
+      }
+    },
+    {
+      "id": "d1-role-content-operations",
+      "stage": "adjacent-role",
+      "purpose": "检索内容策划与运营岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "内容运营"
+      }
+    },
+    {
+      "id": "d1-role-editor",
+      "stage": "adjacent-role",
+      "purpose": "检索采编和编辑岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "编辑"
+      }
+    },
+    {
+      "id": "d1-role-copywriter",
+      "stage": "adjacent-role",
+      "purpose": "检索文案及材料写作岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "文案"
+      }
+    },
+    {
+      "id": "d1-role-planning",
+      "stage": "adjacent-role",
+      "purpose": "检索策划类岗位并观察职责是否偏传播。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "策划"
+      }
+    },
+    {
+      "id": "d1-role-public-opinion",
+      "stage": "adjacent-role",
+      "purpose": "检索舆情监测与公共传播岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "舆情"
+      }
+    },
+    {
+      "id": "d1-role-pr",
+      "stage": "adjacent-role",
+      "purpose": "检索公共关系与对外传播岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "公关"
+      }
+    },
+    {
+      "id": "d1-role-secretarial",
+      "stage": "adjacent-role",
+      "purpose": "检索文秘与综合文字岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "文秘"
+      }
+    }
+  ]
+}

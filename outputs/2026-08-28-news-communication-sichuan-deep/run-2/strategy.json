@@ -1,0 +1,258 @@
+{
+  "schema": "guoyang-search-strategy/v1",
+  "objective": "覆盖成都之外的四川全部地市州，寻找当前国央企岗位并补查主要工业城市的宣传职能。",
+  "approach": "对四川扩展表中的其余 20 个地市州逐一执行不限制学历、专业和招聘类型的宽查询，避免省级地点匹配失效；再对绵阳、德阳、宜宾和泸州使用宣传关键词复核。最终仍按硕士应届、新闻传播和校招目标逐项筛选。",
+  "hypotheses": [
+    "四川省级地点无法有效覆盖按城市保存的岗位，逐城市查询会显著增加候选池",
+    "绵阳、德阳、宜宾和泸州的科研、制造、能源及地方国企可能存在宣传职能",
+    "部分合适岗位可能未规范标注校招类型，宽查询有助于发现后再人工核验"
+  ],
+  "stopCondition": "覆盖四川全部地市州并完成四个主要工业城市的宣传复核后停止；累计达到 48 条查询预算。",
+  "iteration": 2,
+  "queries": [
+    {
+      "id": "d2-broad-mianyang",
+      "stage": "province-city-scan",
+      "purpose": "扫描绵阳当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "绵阳"
+      }
+    },
+    {
+      "id": "d2-broad-deyang",
+      "stage": "province-city-scan",
+      "purpose": "扫描德阳当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "德阳"
+      }
+    },
+    {
+      "id": "d2-broad-yibin",
+      "stage": "province-city-scan",
+      "purpose": "扫描宜宾当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "宜宾"
+      }
+    },
+    {
+      "id": "d2-broad-luzhou",
+      "stage": "province-city-scan",
+      "purpose": "扫描泸州当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "泸州"
+      }
+    },
+    {
+      "id": "d2-broad-nanchong",
+      "stage": "province-city-scan",
+      "purpose": "扫描南充当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "南充"
+      }
+    },
+    {
+      "id": "d2-broad-leshan",
+      "stage": "province-city-scan",
+      "purpose": "扫描乐山当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "乐山"
+      }
+    },
+    {
+      "id": "d2-broad-meishan",
+      "stage": "province-city-scan",
+      "purpose": "扫描眉山当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "眉山"
+      }
+    },
+    {
+      "id": "d2-broad-zigong",
+      "stage": "province-city-scan",
+      "purpose": "扫描自贡当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "自贡"
+      }
+    },
+    {
+      "id": "d2-broad-panzhihua",
+      "stage": "province-city-scan",
+      "purpose": "扫描攀枝花当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "攀枝花"
+      }
+    },
+    {
+      "id": "d2-broad-guangyuan",
+      "stage": "province-city-scan",
+      "purpose": "扫描广元当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "广元"
+      }
+    },
+    {
+      "id": "d2-broad-suining",
+      "stage": "province-city-scan",
+      "purpose": "扫描遂宁当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "遂宁"
+      }
+    },
+    {
+      "id": "d2-broad-neijiang",
+      "stage": "province-city-scan",
+      "purpose": "扫描内江当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "内江"
+      }
+    },
+    {
+      "id": "d2-broad-guangan",
+      "stage": "province-city-scan",
+      "purpose": "扫描广安当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "广安"
+      }
+    },
+    {
+      "id": "d2-broad-dazhou",
+      "stage": "province-city-scan",
+      "purpose": "扫描达州当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "达州"
+      }
+    },
+    {
+      "id": "d2-broad-yaan",
+      "stage": "province-city-scan",
+      "purpose": "扫描雅安当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "雅安"
+      }
+    },
+    {
+      "id": "d2-broad-bazhong",
+      "stage": "province-city-scan",
+      "purpose": "扫描巴中当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "巴中"
+      }
+    },
+    {
+      "id": "d2-broad-ziyang",
+      "stage": "province-city-scan",
+      "purpose": "扫描资阳当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "资阳"
+      }
+    },
+    {
+      "id": "d2-broad-aba",
+      "stage": "province-city-scan",
+      "purpose": "扫描阿坝当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "阿坝"
+      }
+    },
+    {
+      "id": "d2-broad-ganzi",
+      "stage": "province-city-scan",
+      "purpose": "扫描甘孜当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "甘孜"
+      }
+    },
+    {
+      "id": "d2-broad-liangshan",
+      "stage": "province-city-scan",
+      "purpose": "扫描凉山当前全部招聘类型的国央企岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "凉山"
+      }
+    },
+    {
+      "id": "d2-publicity-mianyang",
+      "stage": "regional-publicity",
+      "purpose": "复核绵阳科研院所及制造国企的宣传岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "绵阳",
+        "keyword": "宣传"
+      }
+    },
+    {
+      "id": "d2-publicity-deyang",
+      "stage": "regional-publicity",
+      "purpose": "复核德阳装备制造国企的宣传岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "德阳",
+        "keyword": "宣传"
+      }
+    },
+    {
+      "id": "d2-publicity-yibin",
+      "stage": "regional-publicity",
+      "purpose": "复核宜宾地方国企和制造企业的宣传岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "宜宾",
+        "keyword": "宣传"
+      }
+    },
+    {
+      "id": "d2-publicity-luzhou",
+      "stage": "regional-publicity",
+      "purpose": "复核泸州能源、酒业及地方国企的宣传岗位。",
+      "limit": 100,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "泸州",
+        "keyword": "宣传"
+      }
+    }
+  ]
+}

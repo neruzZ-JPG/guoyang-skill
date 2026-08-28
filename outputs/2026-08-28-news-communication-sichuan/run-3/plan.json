@@ -1,0 +1,249 @@
+{
+  "schema": "guoyang-ai-query-plan/v1",
+  "createdAt": "2026-08-28T07:19:15.639Z",
+  "planningMode": "ai-directed",
+  "expansionVersion": "1.0.0",
+  "profile": {
+    "education": "硕士",
+    "major": "新闻传播",
+    "schoolTier": "985",
+    "locations": [
+      "四川"
+    ],
+    "sectors": [],
+    "recruitTypes": [
+      "校招"
+    ],
+    "keywords": [],
+    "excludeKeywords": [],
+    "acceptUnrestrictedMajor": true,
+    "acceptRelocation": false,
+    "maxQueries": 24,
+    "minimumResults": 15,
+    "resultLimitPerQuery": 30,
+    "scanLimit": 1500
+  },
+  "resolved": {
+    "sectors": [],
+    "recruitTypes": [
+      "campus"
+    ],
+    "originalLocations": [
+      "四川"
+    ],
+    "expandedLocations": [
+      "成都",
+      "绵阳",
+      "德阳",
+      "宜宾",
+      "泸州",
+      "南充",
+      "乐山",
+      "眉山",
+      "自贡",
+      "攀枝花",
+      "广元",
+      "遂宁",
+      "内江",
+      "广安",
+      "达州",
+      "雅安",
+      "巴中",
+      "资阳",
+      "阿坝",
+      "甘孜",
+      "凉山"
+    ],
+    "expandedLocationMap": {
+      "四川": [
+        "成都",
+        "绵阳",
+        "德阳",
+        "宜宾",
+        "泸州",
+        "南充",
+        "乐山",
+        "眉山",
+        "自贡",
+        "攀枝花",
+        "广元",
+        "遂宁",
+        "内江",
+        "广安",
+        "达州",
+        "雅安",
+        "巴中",
+        "资阳",
+        "阿坝",
+        "甘孜",
+        "凉山"
+      ]
+    },
+    "majorFamily": "journalism-communication",
+    "majorAliases": [
+      "新闻传播",
+      "新闻传播学类",
+      "新闻学",
+      "传播学",
+      "广告学",
+      "网络与新媒体",
+      "编辑出版学",
+      "国际新闻与传播",
+      "中国语言文学类"
+    ],
+    "roleKeywords": [
+      "宣传",
+      "品牌",
+      "内容运营",
+      "编辑",
+      "记者",
+      "新媒体",
+      "文案",
+      "融媒体",
+      "舆情",
+      "公关"
+    ],
+    "relatedSectors": [
+      "传媒文化",
+      "科技数字"
+    ]
+  },
+  "policy": {
+    "minimumRequiredStages": [],
+    "minimumResults": 15,
+    "maxQueries": 24,
+    "stopAtStageBoundary": false
+  },
+  "warnings": [
+    "未提供意向行业；查询不会限定行业",
+    "候选查询 44 条，已按 maxQueries=24 截断"
+  ],
+  "totalCandidateQueries": 44,
+  "truncated": true,
+  "queries": [
+    {
+      "id": "r3-major-news-and-communication-chengdu",
+      "stage": "taxonomy-recheck",
+      "rationale": "用真实岗位中的专业目录表述复核成都对口岗位。",
+      "hypothesis": "“新闻与传播”可命中被“新闻传播”遗漏的岗位。",
+      "filters": {
+        "major": "新闻与传播",
+        "location": "成都",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--major",
+        "新闻与传播",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "r3-major-news-and-communication-mianyang",
+      "stage": "city-coverage",
+      "rationale": "补查绵阳新闻与传播类校招岗位。",
+      "hypothesis": "绵阳科研院所和制造央企可能有宣传职能需求。",
+      "filters": {
+        "major": "新闻与传播",
+        "location": "绵阳",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--major",
+        "新闻与传播",
+        "--location",
+        "绵阳",
+        "--type",
+        "campus",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "r3-major-news-and-communication-deyang",
+      "stage": "city-coverage",
+      "rationale": "补查德阳新闻与传播类校招岗位。",
+      "hypothesis": "德阳制造类国企可能设置职能传播岗位。",
+      "filters": {
+        "major": "新闻与传播",
+        "location": "德阳",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--major",
+        "新闻与传播",
+        "--location",
+        "德阳",
+        "--type",
+        "campus",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "r3-major-news-and-communication-yibin",
+      "stage": "city-coverage",
+      "rationale": "补查宜宾新闻与传播类校招岗位。",
+      "hypothesis": "宜宾地方国企和制造企业可能设置品牌宣传职能。",
+      "filters": {
+        "major": "新闻与传播",
+        "location": "宜宾",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--major",
+        "新闻与传播",
+        "--location",
+        "宜宾",
+        "--type",
+        "campus",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "5000"
+      ]
+    }
+  ],
+  "strategy": {
+    "schema": "guoyang-search-strategy/v1",
+    "objective": "利用首轮暴露的“新闻与传播类”专业写法，在四川主要城市完成最后一轮专业字段复核。",
+    "approach": "不再增加宽泛职责同义词；改用真实岗位中出现的专业目录表述“新闻与传播”，分别查询成都、绵阳、德阳和宜宾，以验证专业分词与省级地点写法造成的遗漏。",
+    "hypotheses": [
+      "招聘专业字段使用“新闻与传播类”时，查询“新闻传播”可能无法命中",
+      "招聘地点以城市保存时，查询“四川”可能无法覆盖省内岗位",
+      "成都之外的绵阳、德阳和宜宾可能有同类职能校招岗位"
+    ],
+    "stopCondition": "执行四个主要城市的专业字段复核后停止；达到累计 24 条查询预算，不再用低区分度同义词扩展。",
+    "iteration": 3
+  }
+}

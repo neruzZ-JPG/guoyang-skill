@@ -1,0 +1,1366 @@
+{
+  "schema": "guoyang-query-plan/v1",
+  "createdAt": "2026-08-28T07:36:19.245Z",
+  "planningMode": "deterministic-baseline",
+  "expansionVersion": "1.0.0",
+  "profile": {
+    "education": "硕士",
+    "major": "新闻传播",
+    "schoolTier": "985",
+    "locations": [
+      "四川"
+    ],
+    "sectors": [],
+    "recruitTypes": [
+      "校招"
+    ],
+    "keywords": [],
+    "excludeKeywords": [],
+    "acceptUnrestrictedMajor": true,
+    "acceptRelocation": false,
+    "maxQueries": 48,
+    "minimumResults": 30,
+    "resultLimitPerQuery": 100,
+    "scanLimit": 5000
+  },
+  "resolved": {
+    "sectors": [],
+    "recruitTypes": [
+      "campus"
+    ],
+    "originalLocations": [
+      "四川"
+    ],
+    "expandedLocations": [
+      "成都",
+      "绵阳",
+      "德阳",
+      "宜宾",
+      "泸州",
+      "南充",
+      "乐山",
+      "眉山",
+      "自贡",
+      "攀枝花",
+      "广元",
+      "遂宁",
+      "内江",
+      "广安",
+      "达州",
+      "雅安",
+      "巴中",
+      "资阳",
+      "阿坝",
+      "甘孜",
+      "凉山"
+    ],
+    "expandedLocationMap": {
+      "四川": [
+        "成都",
+        "绵阳",
+        "德阳",
+        "宜宾",
+        "泸州",
+        "南充",
+        "乐山",
+        "眉山",
+        "自贡",
+        "攀枝花",
+        "广元",
+        "遂宁",
+        "内江",
+        "广安",
+        "达州",
+        "雅安",
+        "巴中",
+        "资阳",
+        "阿坝",
+        "甘孜",
+        "凉山"
+      ]
+    },
+    "majorFamily": "journalism-communication",
+    "majorAliases": [
+      "新闻传播",
+      "新闻传播学类",
+      "新闻学",
+      "传播学",
+      "广告学",
+      "网络与新媒体",
+      "编辑出版学",
+      "国际新闻与传播",
+      "中国语言文学类"
+    ],
+    "roleKeywords": [
+      "宣传",
+      "品牌",
+      "内容运营",
+      "编辑",
+      "记者",
+      "新媒体",
+      "文案",
+      "融媒体",
+      "舆情",
+      "公关"
+    ],
+    "relatedSectors": [
+      "传媒文化",
+      "科技数字"
+    ]
+  },
+  "policy": {
+    "minimumRequiredStages": [
+      "exact",
+      "major-expanded",
+      "location-expanded"
+    ],
+    "minimumResults": 30,
+    "maxQueries": 48,
+    "stopAtStageBoundary": true
+  },
+  "warnings": [
+    "未提供意向行业；查询不会限定行业"
+  ],
+  "totalCandidateQueries": 44,
+  "truncated": false,
+  "queries": [
+    {
+      "id": "q001-exact-59ab8e8294",
+      "stage": "exact",
+      "rationale": "使用用户原始专业、地区和意向行业",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q002-major-expanded-87f50eb091",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“新闻传播学类”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播学类",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播学类",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q003-major-expanded-c6f2d00c3a",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“新闻学”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻学",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q004-major-expanded-dacee3dd4e",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“传播学”",
+      "filters": {
+        "education": "硕士",
+        "major": "传播学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "传播学",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q005-major-expanded-5be91c1484",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“广告学”",
+      "filters": {
+        "education": "硕士",
+        "major": "广告学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "广告学",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q006-major-expanded-796261d075",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“网络与新媒体”",
+      "filters": {
+        "education": "硕士",
+        "major": "网络与新媒体",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "网络与新媒体",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q007-major-expanded-21ca077bbd",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“编辑出版学”",
+      "filters": {
+        "education": "硕士",
+        "major": "编辑出版学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "编辑出版学",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q008-major-expanded-ba614d6f96",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“国际新闻与传播”",
+      "filters": {
+        "education": "硕士",
+        "major": "国际新闻与传播",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "国际新闻与传播",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q009-major-expanded-9ba56b714c",
+      "stage": "major-expanded",
+      "rationale": "使用确定性专业扩展“中国语言文学类”",
+      "filters": {
+        "education": "硕士",
+        "major": "中国语言文学类",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "中国语言文学类",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q010-location-expanded-d70c8fbd03",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“成都”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "成都",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q011-location-expanded-b26b8b8a52",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“绵阳”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "绵阳",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "绵阳",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q012-location-expanded-fd52adbe9c",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“德阳”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "德阳",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "德阳",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q013-location-expanded-c90264d894",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“宜宾”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "宜宾",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "宜宾",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q014-location-expanded-08771255f2",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“泸州”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "泸州",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "泸州",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q015-location-expanded-590525610b",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“南充”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "南充",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "南充",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q016-location-expanded-5cb655ef92",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“乐山”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "乐山",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "乐山",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q017-location-expanded-b260e24e2a",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“眉山”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "眉山",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "眉山",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q018-location-expanded-8c44dac300",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“自贡”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "自贡",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "自贡",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q019-location-expanded-f6581bbfa2",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“攀枝花”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "攀枝花",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "攀枝花",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q020-location-expanded-cf305fb99e",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“广元”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "广元",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "广元",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q021-location-expanded-540dc05e90",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“遂宁”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "遂宁",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "遂宁",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q022-location-expanded-1510d2a0a4",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“内江”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "内江",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "内江",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q023-location-expanded-70316034c0",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“广安”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "广安",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "广安",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q024-location-expanded-6392b4804e",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“达州”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "达州",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "达州",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q025-location-expanded-63f19036c0",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“雅安”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "雅安",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "雅安",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q026-location-expanded-efcb13b8e7",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“巴中”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "巴中",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "巴中",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q027-location-expanded-09114e8ab6",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“资阳”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "资阳",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "资阳",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q028-location-expanded-90cfe01c00",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“阿坝”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "阿坝",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "阿坝",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q029-location-expanded-d811f9a494",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“甘孜”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "甘孜",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "甘孜",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q030-location-expanded-10be2930f5",
+      "stage": "location-expanded",
+      "rationale": "将意向地区展开到“凉山”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "凉山",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "凉山",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q031-role-expanded-e71ac5a34e",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“宣传”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "宣传"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "宣传",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q032-role-expanded-b19e409379",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“品牌”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "品牌"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "品牌",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q033-role-expanded-d326d2a706",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“内容运营”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "内容运营"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "内容运营",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q034-role-expanded-b22db717cd",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“编辑”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "编辑"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "编辑",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q035-role-expanded-44bfa3b806",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“记者”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "记者"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "记者",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q036-role-expanded-5ebdb695b9",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“新媒体”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "新媒体"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "新媒体",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q037-role-expanded-f944fd4888",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“文案”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "文案"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "文案",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q038-role-expanded-250231ece3",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“融媒体”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "融媒体"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "融媒体",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q039-role-expanded-49d39f87cb",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“舆情”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "舆情"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "舆情",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q040-role-expanded-d227f7a856",
+      "stage": "role-expanded",
+      "rationale": "检索专业相关岗位词“公关”",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "公关"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "公关",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q041-sector-expanded-40a76754a4",
+      "stage": "sector-expanded",
+      "rationale": "按专业族补充相关行业“传媒文化”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "四川",
+        "sector": "传媒文化",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "四川",
+        "--sector",
+        "传媒文化",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q042-sector-expanded-d4bced2246",
+      "stage": "sector-expanded",
+      "rationale": "按专业族补充相关行业“科技数字”",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "四川",
+        "sector": "科技数字",
+        "recruitType": "campus"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "四川",
+        "--sector",
+        "科技数字",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q043-unrestricted-major-3c7bb76a46",
+      "stage": "unrestricted-major",
+      "rationale": "补充检索“专业不限”岗位",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "专业不限"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "专业不限",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "q044-unrestricted-major-c3581680d5",
+      "stage": "unrestricted-major",
+      "rationale": "补充检索“不限专业”岗位",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "recruitType": "campus",
+        "keyword": "不限专业"
+      },
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "不限专业",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    }
+  ]
+}

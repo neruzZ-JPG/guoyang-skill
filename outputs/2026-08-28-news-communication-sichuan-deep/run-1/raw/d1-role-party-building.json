@@ -1,0 +1,172 @@
+{
+  "query": {
+    "id": "d1-role-party-building",
+    "stage": "adjacent-role",
+    "rationale": "检索党建与党务岗位。",
+    "filters": {
+      "location": "成都",
+      "keyword": "党建"
+    },
+    "limit": 100,
+    "scanLimit": 5000,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "成都",
+      "--keyword",
+      "党建",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ]
+  },
+  "execution": {
+    "command": "npx",
+    "args": [
+      "--yes",
+      "@neruzz-jpg/guoyang-pro@latest",
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "成都",
+      "--keyword",
+      "党建",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ],
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T07:38:49.562Z",
+    "finishedAt": "2026-08-28T07:39:02.565Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": true,
+    "total": 2,
+    "data": {
+      "mode": "live",
+      "fetched_at": "2026-08-28T07:38:50.279Z",
+      "degraded": true,
+      "complete": false,
+      "scanned": 5200,
+      "sources": [
+        {
+          "id": "china-mobile",
+          "ok": true,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:38:50.279Z",
+          "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+        },
+        {
+          "id": "cmb",
+          "ok": true,
+          "count": 0,
+          "scanned": 0,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:38:50.291Z",
+          "note": "已扫描招商银行官方招聘各目标分区"
+        },
+        {
+          "id": "iguopin",
+          "ok": true,
+          "count": 2,
+          "scanned": 5000,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:38:50.292Z",
+          "note": "扫描达到上限 5000，结果可能不完整"
+        },
+        {
+          "id": "ncss",
+          "ok": false,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:38:50.292Z",
+          "error": "unexpected response flag: false"
+        }
+      ],
+      "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+    },
+    "positions": [
+      {
+        "id": "iguopin:215130492788278643",
+        "year": 2026,
+        "enterprise_id": "e2810d0",
+        "enterprise_name": "中国航发四川燃气涡轮研究院",
+        "tier": "T1",
+        "sector": "航空航天军工",
+        "title": "职能管理类",
+        "recruit_type": "campus",
+        "work_location": "成都",
+        "headcount": 1,
+        "education": "硕士",
+        "major": "管理科学与工程类、工商管理类、马克思主义理论类、中共党史党建学类、新闻与传播类、财务会计类",
+        "employment_type": "未明确",
+        "salary_ref": "面议(来源:国聘,仅供参考)",
+        "experience": "应届生",
+        "desc": "需求专业： 市场营销、管理科学与工程、供应链管理、质量管理、马克思主义理论、党建管理、新闻与宣传、人力资源、财务管理等",
+        "remarks": "校招 | 单位性质:国企 | 行业:制造业 | 2000-5000人",
+        "deadline": "2026-12-31 23:59:59",
+        "posted_at": "2026-08-27 21:06:01",
+        "apply_url": "https://www.iguopin.com/job/detail?id=215130492788278643",
+        "source": "https://www.iguopin.com/job/detail?id=215130492788278643",
+        "source_id": "iguopin",
+        "source_position_id": "215130492788278643",
+        "source_company_id": "10685309744808550",
+        "source_urls": [
+          "https://www.iguopin.com/job/detail?id=215130492788278643"
+        ],
+        "fetched_at": "2026-08-28T07:38:50.292Z",
+        "match_confidence": "affiliate",
+        "quality_warnings": [
+          "梯队/行业由已识别母集团继承，请结合具体子公司核验"
+        ]
+      },
+      {
+        "id": "iguopin:213585935390999310",
+        "year": 2026,
+        "enterprise_id": "",
+        "enterprise_name": "宜宾人才发展集团有限公司",
+        "title": "四川三江汇海融资租赁有限公司-副总经理（A00008）",
+        "recruit_type": "social",
+        "work_location": "成都、宜宾-翠屏区",
+        "headcount": 1,
+        "education": "硕士",
+        "major": "未标注",
+        "employment_type": "未明确",
+        "salary_ref": "面议(来源:国聘,仅供参考)",
+        "experience": "5-10年",
+        "desc": "岗位职责 1.协助总经理拟订公司内部管理机构设置方案； 2.协助总经理拟订公司经营管理基本管理制度； 3.协助总经理制定并执行公司经营管理具体规章和关键流程； 4.协助总经理组织公司的外部环境和内部资源分析，拟定公司战略发展规划草案； 5.协助总经理组织、指导、制定公司的年度工作方案； 6.负责分管部门各项目标任务的完成及团队管理； 7.定期向总经理汇报分管部门的运营情况、经营计划的落实情况； 8.按“一岗双责”要求，负责公司党的建设及党风廉政建设、安全生产等工作； 9.根据总经理授权，代表公司签署有关合同和协议； 10.上级交办或董事会授予的其他工作事项； 11.公司章程规定的其他事项。 任职要求 1.年龄：43周岁及以下； 2.学历：硕士研究生及以上；硕士：0101哲学、0201理论经济学、0202应用经济学、0251金融、0252应用统计、0253税务、0254国际商务、0255保险、0256资产评估、0258数字经济、0301法学、0302政治学、0303社会学、0304民族学、0305马克思主义理论、0307中共党史党建学、0308纪检监察学、0351法律、0352社会工作、0354知识产权、0401教育学、0402心理学、0453国际中文教育、0454应用心理、0501中国语言文学、0503新闻传播学、0552新闻与传播、0701数学、0702物理学、0703化学、07",
+        "remarks": "社招 | 单位性质:国企 | 行业:商务服务业 | 50人以下",
+        "deadline": "2026-09-09 23:59:59",
+        "posted_at": "2026-08-27 09:59:25",
+        "apply_url": "https://www.iguopin.com/job/detail?id=213585935390999310",
+        "source": "https://www.iguopin.com/job/detail?id=213585935390999310",
+        "source_id": "iguopin",
+        "source_position_id": "213585935390999310",
+        "source_company_id": "55101817742164007",
+        "source_urls": [
+          "https://www.iguopin.com/job/detail?id=213585935390999310"
+        ],
+        "fetched_at": "2026-08-28T07:38:50.292Z",
+        "match_confidence": "none",
+        "quality_warnings": [
+          "专业要求未标注，请以投递页为准"
+        ]
+      }
+    ]
+  }
+}

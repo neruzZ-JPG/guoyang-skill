@@ -1,0 +1,66 @@
+{
+  "schema": "guoyang-search-strategy/v1",
+  "objective": "利用首轮暴露的“新闻与传播类”专业写法，在四川主要城市完成最后一轮专业字段复核。",
+  "approach": "不再增加宽泛职责同义词；改用真实岗位中出现的专业目录表述“新闻与传播”，分别查询成都、绵阳、德阳和宜宾，以验证专业分词与省级地点写法造成的遗漏。",
+  "hypotheses": [
+    "招聘专业字段使用“新闻与传播类”时，查询“新闻传播”可能无法命中",
+    "招聘地点以城市保存时，查询“四川”可能无法覆盖省内岗位",
+    "成都之外的绵阳、德阳和宜宾可能有同类职能校招岗位"
+  ],
+  "stopCondition": "执行四个主要城市的专业字段复核后停止；达到累计 24 条查询预算，不再用低区分度同义词扩展。",
+  "iteration": 3,
+  "queries": [
+    {
+      "id": "r3-major-news-and-communication-chengdu",
+      "stage": "taxonomy-recheck",
+      "purpose": "用真实岗位中的专业目录表述复核成都对口岗位。",
+      "hypothesis": "“新闻与传播”可命中被“新闻传播”遗漏的岗位。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻与传播",
+        "location": "成都",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r3-major-news-and-communication-mianyang",
+      "stage": "city-coverage",
+      "purpose": "补查绵阳新闻与传播类校招岗位。",
+      "hypothesis": "绵阳科研院所和制造央企可能有宣传职能需求。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻与传播",
+        "location": "绵阳",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r3-major-news-and-communication-deyang",
+      "stage": "city-coverage",
+      "purpose": "补查德阳新闻与传播类校招岗位。",
+      "hypothesis": "德阳制造类国企可能设置职能传播岗位。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻与传播",
+        "location": "德阳",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r3-major-news-and-communication-yibin",
+      "stage": "city-coverage",
+      "purpose": "补查宜宾新闻与传播类校招岗位。",
+      "hypothesis": "宜宾地方国企和制造企业可能设置品牌宣传职能。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻与传播",
+        "location": "宜宾",
+        "recruitType": "校招"
+      }
+    }
+  ]
+}

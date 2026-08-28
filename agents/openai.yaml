@@ -1,0 +1,4 @@
+interface:
+  display_name: "国央企求职检索"
+  short_description: "由 AI 自主规划检索、分析岗位并生成可验证的国央企求职报告"
+  default_prompt: "使用 $guoyang-skill 自主规划并迭代检索，根据真实岗位证据完成分析，生成可验证的 HTML 求职报告。"

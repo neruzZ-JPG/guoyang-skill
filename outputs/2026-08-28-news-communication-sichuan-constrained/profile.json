@@ -1,0 +1,29 @@
+{
+  "education": "硕士",
+  "major": "新闻传播",
+  "schoolTier": "985",
+  "locations": [
+    "四川"
+  ],
+  "sectors": [],
+  "recruitTypes": [
+    "校招"
+  ],
+  "keywords": [],
+  "excludeKeywords": [
+    "劳务派遣",
+    "长期出差",
+    "常驻项目",
+    "驻外",
+    "偏远"
+  ],
+  "acceptUnrestrictedMajor": true,
+  "acceptRelocation": false,
+  "maxQueries": 32,
+  "minimumResults": 15,
+  "resultLimitPerQuery": 50,
+  "scanLimit": 3000,
+  "majorBeamWidth": 8,
+  "majorBeamDepth": 5,
+  "majorMaxCandidates": 24
+}

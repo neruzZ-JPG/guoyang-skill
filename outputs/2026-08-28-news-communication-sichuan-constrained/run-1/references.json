@@ -1,0 +1,121 @@
+{
+  "enterprises": [
+    {
+      "ok": true,
+      "args": [
+        "enterprises",
+        "--sector",
+        "传媒文化",
+        "--limit",
+        "20",
+        "--format",
+        "json"
+      ],
+      "payload": {
+        "total": 0,
+        "enterprises": []
+      },
+      "startedAt": "2026-08-28T08:54:26.278Z",
+      "finishedAt": "2026-08-28T08:54:26.371Z"
+    },
+    {
+      "ok": true,
+      "args": [
+        "enterprises",
+        "--sector",
+        "科技数字",
+        "--limit",
+        "20",
+        "--format",
+        "json"
+      ],
+      "payload": {
+        "total": 3,
+        "enterprises": [
+          {
+            "id": "e3b962e",
+            "name": "中国电子信息产业集团有限公司",
+            "short": "中国电子",
+            "tier": "T1",
+            "sector": "科技数字",
+            "regulator": "国务院国资委",
+            "listed": "上市(中国软件600536、中国长城000066、深科技000021、南京熊猫600775、上海贝岭600171等)",
+            "hq": "深圳",
+            "aliases": [
+              "中国电子",
+              "CEC"
+            ],
+            "notes": "网信安全与基础软硬件(飞腾CPU/麒麟OS)国家队。信创主力;计算机/微电子/网络安全专业对口。深圳/北京布局。",
+            "source": "industrial"
+          },
+          {
+            "id": "ef4eabc",
+            "name": "中国煤炭科工集团有限公司",
+            "short": "中国煤科",
+            "tier": "T2",
+            "sector": "科技数字",
+            "regulator": "国务院国资委",
+            "listed": "上市(天地科技600582、天玛智控688215、创力集团603012)",
+            "notes": "煤炭行业科研与装备国家队(智能化采煤)。技术导向、稳定;机械/自动化/采矿/电气对口,院所多省分布。",
+            "source": "industrial"
+          },
+          {
+            "id": "ecfc086",
+            "name": "中国民航信息集团有限公司",
+            "short": "中航信",
+            "tier": "T2",
+            "sector": "科技数字",
+            "regulator": "国务院国资委",
+            "listed": "上市(中国民航信息网络00696)",
+            "hq": "北京",
+            "aliases": [
+              "中航信",
+              "航信",
+              "TravelSky"
+            ],
+            "notes": "民航旅客服务系统(订座/离港)垄断运营。IT平台稳定、技术含量高;计算机/软件/数据/通信对口,北京总部。",
+            "source": "industrial"
+          }
+        ]
+      },
+      "startedAt": "2026-08-28T08:54:26.371Z",
+      "finishedAt": "2026-08-28T08:54:26.472Z"
+    }
+  ],
+  "calendar": [
+    {
+      "ok": true,
+      "args": [
+        "calendar",
+        "--sector",
+        "传媒文化",
+        "--type",
+        "campus"
+      ],
+      "payload": {
+        "total": 0,
+        "note": "招聘时间线为典型规律参考,以各企业当年公告为准",
+        "entries": []
+      },
+      "startedAt": "2026-08-28T08:54:26.472Z",
+      "finishedAt": "2026-08-28T08:54:26.569Z"
+    },
+    {
+      "ok": true,
+      "args": [
+        "calendar",
+        "--sector",
+        "科技数字",
+        "--type",
+        "campus"
+      ],
+      "payload": {
+        "total": 0,
+        "note": "招聘时间线为典型规律参考,以各企业当年公告为准",
+        "entries": []
+      },
+      "startedAt": "2026-08-28T08:54:26.569Z",
+      "finishedAt": "2026-08-28T08:54:26.665Z"
+    }
+  ]
+}

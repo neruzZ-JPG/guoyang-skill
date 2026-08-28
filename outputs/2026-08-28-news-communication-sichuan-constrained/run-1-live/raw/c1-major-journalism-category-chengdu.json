@@ -1,0 +1,143 @@
+{
+  "query": {
+    "id": "c1-major-journalism-category-chengdu",
+    "stage": "major-taxonomy",
+    "rationale": "覆盖招聘公告使用“新闻传播学类”的专业目录写法。",
+    "hypothesis": "专业大类写法会补充精确词遗漏。",
+    "filters": {
+      "major": "新闻传播学类",
+      "location": "成都",
+      "recruitType": "campus"
+    },
+    "limit": 50,
+    "scanLimit": 5000,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--major",
+      "新闻传播学类",
+      "--location",
+      "成都",
+      "--type",
+      "campus",
+      "--limit",
+      "50",
+      "--scan-limit",
+      "5000"
+    ]
+  },
+  "execution": {
+    "command": "outputs/2026-08-28-news-communication-sichuan-constrained/guoyang-pro-local",
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--major",
+      "新闻传播学类",
+      "--location",
+      "成都",
+      "--type",
+      "campus",
+      "--limit",
+      "50",
+      "--scan-limit",
+      "5000"
+    ],
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T08:56:06.527Z",
+    "finishedAt": "2026-08-28T08:56:19.399Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": true,
+    "total": 1,
+    "data": {
+      "mode": "live",
+      "fetched_at": "2026-08-28T08:56:06.619Z",
+      "degraded": true,
+      "complete": false,
+      "scanned": 5210,
+      "sources": [
+        {
+          "id": "china-mobile",
+          "ok": true,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T08:56:06.619Z",
+          "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+        },
+        {
+          "id": "cmb",
+          "ok": true,
+          "count": 3,
+          "scanned": 10,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T08:56:06.633Z",
+          "note": "已扫描招商银行官方招聘各目标分区"
+        },
+        {
+          "id": "iguopin",
+          "ok": true,
+          "count": 14,
+          "scanned": 5000,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T08:56:06.634Z",
+          "note": "扫描达到上限 5000，结果可能不完整"
+        },
+        {
+          "id": "ncss",
+          "ok": false,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T08:56:06.634Z",
+          "error": "unexpected response flag: false"
+        }
+      ],
+      "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+    },
+    "positions": [
+      {
+        "id": "iguopin:215730191689842788",
+        "year": 2026,
+        "enterprise_id": "",
+        "enterprise_name": "猛士科技（襄阳）有限公司",
+        "sector": "汽车制造",
+        "title": "零售储备营销管培生（成都）",
+        "recruit_type": "campus",
+        "work_location": "成都-武侯区",
+        "headcount": 3,
+        "education": "本科",
+        "major": "经济与贸易类、工商管理类、新闻传播学类、公共管理类、艺术设计类、能源动力类",
+        "employment_type": "未明确",
+        "salary_ref": "面议(来源:国聘,仅供参考)",
+        "experience": "应届生",
+        "desc": "职位职责： 1、负责销售业务的开展，参与客户全流程管理，熟练掌握销售流程，提升销售技巧； 2、协助负责区域城市端的市场营销及门店管理服务工作，通过产品培训、销售服务、市场运营、经销商对接等管理，提升门店的市场营销技能和经营指标的达成能力； 3、具备敏锐的市场洞察力，关注用户市场，以用户为中心，快速和有效推进市场营销策略落地，提升城市端门店服务体验和服务质量； 4、跨部门协同和沟通，协助直营门店店长进行门店要求规范和运营等日常工作问题对接，并联动总部、城市端等资源进行有效解决； 5、根据门店实际情况，确保公司各项政策指标在门店顺利落地。 职位要求： 1、本科及以上毕业生； 2、市场营销、国际经济与贸易、工商管理、传播学、网络与新媒体、新闻学、公共管理、视觉传达设计、艺术设计、工业设计、能源与动力工程等相关专业； 3、按时取得毕业证、学位证、英语四级/六级证书； 4、综合素质：乐观开朗、积极上进、视野开阔、思维敏捷、有较强的自主学习能力、创新能力、沟通能力及抗压能力，善于运用新的工作方法解决问题；有学生会、社团、班级干部相关经验优先； 5、身体健康； 6、持有效中国机动车驾驶证（C1及以上），能熟练驾驶。",
+        "remarks": "校招 | 单位性质:国企 | 行业:汽车制造业 | 1000-2000人",
+        "deadline": "2026-09-28 00:00:00",
+        "posted_at": "2026-08-28 00:00:00",
+        "apply_url": "https://www.iguopin.com/job/detail?id=215730191689842788",
+        "source": "https://www.iguopin.com/job/detail?id=215730191689842788",
+        "source_id": "iguopin",
+        "source_position_id": "215730191689842788",
+        "source_company_id": "214154864157000615",
+        "source_urls": [
+          "https://www.iguopin.com/job/detail?id=215730191689842788"
+        ],
+        "fetched_at": "2026-08-28T08:56:06.634Z",
+        "match_confidence": "none",
+        "quality_warnings": [
+          "行业由国聘企业行业“汽车制造业”归一化"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "query": {
+    "id": "c1-major-news-and-communication-chengdu",
+    "stage": "major-taxonomy",
+    "rationale": "用专业目录常见表述“新闻与传播”复核成都岗位。",
+    "hypothesis": "“新闻与传播类”比用户原词“新闻传播”更容易匹配公告专业字段。",
+    "filters": {
+      "major": "新闻与传播",
+      "location": "成都",
+      "recruitType": "campus"
+    },
+    "limit": 50,
+    "scanLimit": 5000,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--major",
+      "新闻与传播",
+      "--location",
+      "成都",
+      "--type",
+      "campus",
+      "--limit",
+      "50",
+      "--scan-limit",
+      "5000"
+    ]
+  },
+  "execution": {
+    "command": "outputs/2026-08-28-news-communication-sichuan-constrained/guoyang-pro-local",
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--major",
+      "新闻与传播",
+      "--location",
+      "成都",
+      "--type",
+      "campus",
+      "--limit",
+      "50",
+      "--scan-limit",
+      "5000"
+    ],
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T08:55:53.509Z",
+    "finishedAt": "2026-08-28T08:56:06.526Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": true,
+    "total": 1,
+    "data": {
+      "mode": "live",
+      "fetched_at": "2026-08-28T08:55:53.602Z",
+      "degraded": true,
+      "complete": false,
+      "scanned": 5210,
+      "sources": [
+        {
+          "id": "china-mobile",
+          "ok": true,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T08:55:53.602Z",
+          "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+        },
+        {
+          "id": "cmb",
+          "ok": true,
+          "count": 3,
+          "scanned": 10,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T08:55:53.614Z",
+          "note": "已扫描招商银行官方招聘各目标分区"
+        },
+        {
+          "id": "iguopin",
+          "ok": true,
+          "count": 14,
+          "scanned": 5000,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T08:55:53.615Z",
+          "note": "扫描达到上限 5000，结果可能不完整"
+        },
+        {
+          "id": "ncss",
+          "ok": false,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T08:55:53.615Z",
+          "error": "unexpected response flag: false"
+        }
+      ],
+      "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+    },
+    "positions": [
+      {
+        "id": "iguopin:215130492788278643",
+        "year": 2026,
+        "enterprise_id": "e2810d0",
+        "enterprise_name": "中国航发四川燃气涡轮研究院",
+        "tier": "T1",
+        "sector": "航空航天军工",
+        "title": "职能管理类",
+        "recruit_type": "campus",
+        "work_location": "成都",
+        "headcount": 1,
+        "education": "硕士",
+        "major": "管理科学与工程类、工商管理类、马克思主义理论类、中共党史党建学类、新闻与传播类、财务会计类",
+        "employment_type": "未明确",
+        "salary_ref": "面议(来源:国聘,仅供参考)",
+        "experience": "应届生",
+        "desc": "需求专业： 市场营销、管理科学与工程、供应链管理、质量管理、马克思主义理论、党建管理、新闻与宣传、人力资源、财务管理等",
+        "remarks": "校招 | 单位性质:国企 | 行业:制造业 | 2000-5000人",
+        "deadline": "2026-12-31 23:59:59",
+        "posted_at": "2026-08-27 21:06:01",
+        "apply_url": "https://www.iguopin.com/job/detail?id=215130492788278643",
+        "source": "https://www.iguopin.com/job/detail?id=215130492788278643",
+        "source_id": "iguopin",
+        "source_position_id": "215130492788278643",
+        "source_company_id": "10685309744808550",
+        "source_urls": [
+          "https://www.iguopin.com/job/detail?id=215130492788278643"
+        ],
+        "fetched_at": "2026-08-28T08:55:53.615Z",
+        "match_confidence": "affiliate",
+        "quality_warnings": [
+          "梯队/行业由已识别母集团继承，请结合具体子公司核验"
+        ]
+      }
+    ]
+  }
+}
