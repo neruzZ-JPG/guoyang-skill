@@ -1,0 +1,249 @@
+{
+  "query": {
+    "id": "d2-broad-ganzi",
+    "stage": "province-city-scan",
+    "rationale": "扫描甘孜当前全部招聘类型的国央企岗位。",
+    "filters": {
+      "location": "甘孜"
+    },
+    "limit": 100,
+    "scanLimit": 5000,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "甘孜",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ]
+  },
+  "execution": {
+    "command": "npx",
+    "args": [
+      "--yes",
+      "@neruzz-jpg/guoyang-pro@latest",
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "甘孜",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ],
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T07:47:53.550Z",
+    "finishedAt": "2026-08-28T07:48:06.871Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": true,
+    "total": 5,
+    "data": {
+      "mode": "live",
+      "fetched_at": "2026-08-28T07:47:54.267Z",
+      "degraded": true,
+      "complete": false,
+      "scanned": 5369,
+      "sources": [
+        {
+          "id": "china-mobile",
+          "ok": true,
+          "count": 5,
+          "scanned": 100,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:47:54.267Z",
+          "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+        },
+        {
+          "id": "cmb",
+          "ok": true,
+          "count": 0,
+          "scanned": 169,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:47:54.280Z",
+          "note": "已扫描招商银行官方招聘各目标分区"
+        },
+        {
+          "id": "iguopin",
+          "ok": true,
+          "count": 0,
+          "scanned": 5000,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:47:54.281Z",
+          "note": "扫描达到上限 5000，结果可能不完整"
+        },
+        {
+          "id": "ncss",
+          "ok": false,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:47:54.282Z",
+          "error": "unexpected response flag: false"
+        }
+      ],
+      "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+    },
+    "positions": [
+      {
+        "id": "china-mobile:067c3a81-b1c9-4597-b22f-1f0f9f1e4e12",
+        "year": 2026,
+        "enterprise_id": "",
+        "enterprise_name": "四川分公司",
+        "sector": "电信运营",
+        "title": "拓展项目经理",
+        "recruit_type": "social",
+        "work_location": "四川省-甘孜藏族自治州-康定市",
+        "headcount": 3,
+        "education": "大学本科",
+        "major": "2. 匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业",
+        "employment_type": "未明确",
+        "experience": "2年及以上",
+        "desc": "1.负责集客/政企/工程条线业务拓展，依据公司战略规划与业务拓展目标；\r\n2.负责全流程管控拓展项目启动、筹备、回款、复盘全生命周期，确保拓展指标、服务质量、落地时效及预算目标达成；\r\n3.负责拓展项目团队的搭建、统筹与日常管理；\r\n4.负责客户服务；支撑公司拓展体系、项目流程与标准化能力建设；\r\n5.负责各类拓展项目的整体策划、统筹组织与内外协调工作；\r\n6.负责项目结算与回款工作，保障各类拓展项目高效落地、高质量完成，助力公司业务扩容与市场拓展。\r\n7.完成公司及部门负责人交办的其他工作。",
+        "requirements": "1. 全日制大学本科及以上学历；\r\n2. 匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业；\r\n3. 原则上35岁及以下，特别优秀者可适当放宽至40岁；\r\n4. 2年以上通信行业集客/政企/工程条线业务售前咨询或项目拓展方案设计经验，有成功案例；\r\n5. 持有PMP、信息系统项目管理师或主流云厂商/网络厂商高级认证者优先；\r\n6. 具备极强的逻辑思维、结构化表达、商务沟通与文案撰写能力；\r\n7. 具备优秀的客户需求洞察力与生态资源整合能力；\r\n8.持有公司紧缺证书的人员可破格及优先录取。\r\n紧缺证书：一级建造师（机电、铁路、建筑）、注册造价工程师、注册安全工程师、CCIE、  HCIE、计算机技术与软件专业技术资格（水平 ）证书（中级、高级）、中级和高级专业技术职称（网络安全、电子智能化、建筑、机电等专业）、bim应用技能资格证书（高级）、信创高级证书（集成项目管理师、规划管理师、系统架构师、系统开发工程师）、机房（数据中心）建设与运维管理工程师。",
+        "remarks": "招聘单位简称:铁通公司 | 工作性质:全职 | 来源:中国移动官方招聘站",
+        "deadline": "2026-09-23",
+        "posted_at": "2026-06-23",
+        "apply_url": "https://job.10086.cn/personal/job/detail.html?id=067c3a81-b1c9-4597-b22f-1f0f9f1e4e12",
+        "source": "https://job.10086.cn/personal/job/detail.html?id=067c3a81-b1c9-4597-b22f-1f0f9f1e4e12",
+        "source_id": "china-mobile",
+        "source_position_id": "067c3a81-b1c9-4597-b22f-1f0f9f1e4e12",
+        "source_urls": [
+          "https://job.10086.cn/personal/job/detail.html?id=067c3a81-b1c9-4597-b22f-1f0f9f1e4e12"
+        ],
+        "fetched_at": "2026-08-28T07:47:54.267Z",
+        "match_confidence": "none"
+      },
+      {
+        "id": "china-mobile:506f128d-0768-40ae-b22b-8cd9f03aa51e",
+        "year": 2026,
+        "enterprise_id": "",
+        "enterprise_name": "四川分公司",
+        "sector": "电信运营",
+        "title": "区县业务主管",
+        "recruit_type": "social",
+        "work_location": "四川省-甘孜藏族自治州",
+        "headcount": 3,
+        "education": "大学本科",
+        "major": "2.匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业",
+        "employment_type": "未明确",
+        "experience": "2年及以上",
+        "desc": "1.组织区县班组及应急班组合理有序开展好装维服务工作；\r\n2.管控各区县家集客等装维质量及满意度等指标；\r\n3.开展区县装维质量短板指标复盘分析，制定改善计划和措施，组织并推动指标的不断改善；\r\n4.组织区县开展装维质量提升培训、练兵等赋能活动；\r\n5.与属地移动及合作单位开展装维质量及满意度等装维服务协同；\r\n6.负责成本管控及回款；                                                                          7.完成公司及地市负责人安排的其他工作。",
+        "requirements": "1.全日制大学本科及以上学历；\r\n2.匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业；\r\n3.原则上35岁及以下，特别优秀者可适当放宽至40岁；\r\n4.2年以上从事通信运营商装维营销工作经验，精通“家集客”专业知识，熟悉“家集客”装维业务管理，具备设备操作、简单故障处理能力；\r\n5.持有中国移动/相关行业协会/国家部委相关资格认证者优先；\r\n6.具备良好的沟通能力与团队协作精神，能适应夜间、节假日及恶劣天气下的应急保障工作；\r\n7.安全意识强，遵纪守法，服从公司管理；\r\n8.持有公司紧缺证书的人员可破格及优先录取。\r\n紧缺证书：一级建造师（机电、铁路、建筑）、注册造价工程师、注册安全工程师、CCIE、  HCIE、计算机技术与软件专业技术资格（水平 ）证书（中级、高级）、中级和高级专业技术职称（网络安全、电子智能化、建筑、机电等专业）、bim应用技能资格证书（高级）、信创高级证书（集成项目管理师、规划管理师、系统架构师、系统开发工程师）、机房（数据中心）建设与运维管理工程师。",
+        "remarks": "招聘单位简称:铁通公司 | 工作性质:全职 | 来源:中国移动官方招聘站",
+        "deadline": "2027-06-23",
+        "posted_at": "2026-06-23",
+        "apply_url": "https://job.10086.cn/personal/job/detail.html?id=506f128d-0768-40ae-b22b-8cd9f03aa51e",
+        "source": "https://job.10086.cn/personal/job/detail.html?id=506f128d-0768-40ae-b22b-8cd9f03aa51e",
+        "source_id": "china-mobile",
+        "source_position_id": "506f128d-0768-40ae-b22b-8cd9f03aa51e",
+        "source_urls": [
+          "https://job.10086.cn/personal/job/detail.html?id=506f128d-0768-40ae-b22b-8cd9f03aa51e"
+        ],
+        "fetched_at": "2026-08-28T07:47:54.267Z",
+        "match_confidence": "none"
+      },
+      {
+        "id": "china-mobile:549be6f3-a012-4db3-a466-3203b215eab7",
+        "year": 2026,
+        "enterprise_id": "",
+        "enterprise_name": "四川分公司",
+        "sector": "电信运营",
+        "title": "营销项目经理",
+        "recruit_type": "social",
+        "work_location": "四川省-甘孜藏族自治州-康定市",
+        "headcount": 3,
+        "education": "大学本科",
+        "major": "2. 匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业",
+        "employment_type": "未明确",
+        "experience": "2年及以上",
+        "desc": "1.完成市场条线年度、季度、月度整体预算规划，跟踪市场运营情况，开展市场基本面、发展趋势分析，对接上级及各区县支撑服务中心、属地移动提供市场经营情况分析；\r\n2.牵头对重点工作、重点区域、异常情况进行专题分析；\r\n3.开展分项业务市场经营能力综合评估；\r\n4.编制、分解市场发展计划指标，统筹区域对考核办法的意见及要求，完善、优化市场经营绩效考核管理，跟踪、评测、输出考核完成情况；\r\n5.牵头制定市场条线的规范经营管理文件、规范和要求，跟踪、监督各地市中心，确保合规经营。\r\n6.完成公司及部门负责人交办的其他工作。",
+        "requirements": "1. 全日制大学本科及以上学历；\r\n2. 匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业；\r\n3. 原则上35岁及以下，特别优秀者可适当放宽至40岁；\r\n4. 2年以上通信行业市场运营经验，熟悉运营商市场条线的经营管理模式；\r\n5. 持有中国移动/相关行业协会/国家部委相关资格认证者优先；\r\n6. 具备出色的沟通、谈判、抗压能力；\r\n7.持有公司紧缺证书的人员可破格及优先录取。\r\n紧缺证书：一级建造师（机电、铁路、建筑）、注册造价工程师、注册安全工程师、CCIE、  HCIE、计算机技术与软件专业技术资格（水平 ）证书（中级、高级）、中级和高级专业技术职称（网络安全、电子智能化、建筑、机电等专业）、bim应用技能资格证书（高级）、信创高级证书（集成项目管理师、规划管理师、系统架构师、系统开发工程师）、机房（数据中心）建设与运维管理工程师。",
+        "remarks": "招聘单位简称:铁通公司 | 工作性质:全职 | 来源:中国移动官方招聘站",
+        "deadline": "2027-06-24",
+        "posted_at": "2026-06-23",
+        "apply_url": "https://job.10086.cn/personal/job/detail.html?id=549be6f3-a012-4db3-a466-3203b215eab7",
+        "source": "https://job.10086.cn/personal/job/detail.html?id=549be6f3-a012-4db3-a466-3203b215eab7",
+        "source_id": "china-mobile",
+        "source_position_id": "549be6f3-a012-4db3-a466-3203b215eab7",
+        "source_urls": [
+          "https://job.10086.cn/personal/job/detail.html?id=549be6f3-a012-4db3-a466-3203b215eab7"
+        ],
+        "fetched_at": "2026-08-28T07:47:54.267Z",
+        "match_confidence": "none"
+      },
+      {
+        "id": "china-mobile:7cb3e9bc-c720-4107-aefa-55cc6447e258",
+        "year": 2026,
+        "enterprise_id": "",
+        "enterprise_name": "四川分公司",
+        "sector": "电信运营",
+        "title": "交付项目经理",
+        "recruit_type": "social",
+        "work_location": "四川省-甘孜藏族自治州-康定市",
+        "headcount": 3,
+        "education": "大学本科",
+        "major": "2. 匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业",
+        "employment_type": "未明确",
+        "experience": "2年及以上",
+        "desc": "1.负责全流程管控项目启动、规划、执行与关闭，确保质量、进度、安全及成本目标达成；\r\n2.负责项目交付团队建设管理；支撑项目管理能力建设；\r\n3.负责项目的整体组织、协调工作，端到端的实施交付；\r\n4.负责协调资源，落实项目有关的质量控制、成本控制、进度控制等工作；\r\n5.负责监控项目实施进度和质量，组织项目验收工作，确保项目按时高质量交付，配合拓展项目经理完成回款；\r\n6.完成公司及部门负责人交办的其他工作。",
+        "requirements": "1. 全日制大学本科及以上学历；\r\n2. 匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业；\r\n3. 原则上35岁及以下，特别优秀者可适当放宽至40岁；\r\n4. 2年以上通信行业工程管理与交付经验，熟悉运营商等主业的建设流程与管理模式；\r\n5. 具备通信管线、基站、传输等至少一类工程的完整项目周期管理经验，熟悉概预算与招投标流程；\r\n6. 持有一/二级注册建造师执业资格及安B证者优先；\r\n7. 具备出色的沟通、谈判、抗压及团队领导能力，能适应长期出差驻场；\r\n8.持有公司紧缺证书的人员可破格及优先录取。\r\n紧缺证书：一级建造师（机电、铁路、建筑）、注册造价工程师、注册安全工程师、CCIE、  HCIE、计算机技术与软件专业技术资格（水平 ）证书（中级、高级）、中级和高级专业技术职称（网络安全、电子智能化、建筑、机电等专业）、bim应用技能资格证书（高级）、信创高级证书（集成项目管理师、规划管理师、系统架构师、系统开发工程师）、机房（数据中心）建设与运维管理工程师。",
+        "remarks": "招聘单位简称:铁通公司 | 工作性质:全职 | 来源:中国移动官方招聘站",
+        "deadline": "2026-09-23",
+        "posted_at": "2026-06-23",
+        "apply_url": "https://job.10086.cn/personal/job/detail.html?id=7cb3e9bc-c720-4107-aefa-55cc6447e258",
+        "source": "https://job.10086.cn/personal/job/detail.html?id=7cb3e9bc-c720-4107-aefa-55cc6447e258",
+        "source_id": "china-mobile",
+        "source_position_id": "7cb3e9bc-c720-4107-aefa-55cc6447e258",
+        "source_urls": [
+          "https://job.10086.cn/personal/job/detail.html?id=7cb3e9bc-c720-4107-aefa-55cc6447e258"
+        ],
+        "fetched_at": "2026-08-28T07:47:54.267Z",
+        "match_confidence": "none"
+      },
+      {
+        "id": "china-mobile:a6c8db60-1f5e-4a28-b969-6b4b3c59c7d8",
+        "year": 2026,
+        "enterprise_id": "",
+        "enterprise_name": "四川分公司",
+        "sector": "电信运营",
+        "title": "维护项目经理",
+        "recruit_type": "social",
+        "work_location": "四川省-甘孜藏族自治州-康定市",
+        "headcount": 1,
+        "education": "大学本科",
+        "major": "2.匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业",
+        "employment_type": "未明确",
+        "experience": "2年及以上",
+        "desc": "1.负责组织各区县支撑服务中心合理有序开展好装维服务工作；\r\n2.管控装维质量、服务及满意度等指标；\r\n3.开展装维质量提升培训、练兵等赋能活动；\r\n4.负责收支利管控，回款等；\r\n5.与移动开展装维质量及满意度的协同推进；\r\n6.完成公司及部门负责人交办的其他工作。",
+        "requirements": "1.全日制大学本科及以上学历；\r\n2.匹配公司“新两者”定位的IT/CT/DT类、数智工程类、市场营销类等相关专业；\r\n3.原则上35岁及以下，特别优秀者可适当放宽至40岁；\r\n4.2年以上从事通信运营商装维工作经验，精通“家集客”专业知识，熟悉“家集客”装维业务管理，具备设备操作、简单故障处理能力；\r\n5.持有中国移动/相关行业协会/国家部委相关资格认证者优先；\r\n6.具备良好的沟通能力与团队协作精神，能适应夜间、节假日及恶劣天气下的应急保障工作；\r\n7.安全意识强，遵纪守法，服从公司管理；\r\n8.持有公司紧缺证书的人员可破格及优先录取。\r\n紧缺证书：一级建造师（机电、铁路、建筑）、注册造价工程师、注册安全工程师、CCIE、  HCIE、计算机技术与软件专业技术资格（水平 ）证书（中级、高级）、中级和高级专业技术职称（网络安全、电子智能化、建筑、机电等专业）、bim应用技能资格证书（高级）、信创高级证书（集成项目管理师、规划管理师、系统架构师、系统开发工程师）、机房（数据中心）建设与运维管理工程师。",
+        "remarks": "招聘单位简称:铁通公司 | 工作性质:全职 | 来源:中国移动官方招聘站",
+        "deadline": "2027-06-24",
+        "posted_at": "2026-06-22",
+        "apply_url": "https://job.10086.cn/personal/job/detail.html?id=a6c8db60-1f5e-4a28-b969-6b4b3c59c7d8",
+        "source": "https://job.10086.cn/personal/job/detail.html?id=a6c8db60-1f5e-4a28-b969-6b4b3c59c7d8",
+        "source_id": "china-mobile",
+        "source_position_id": "a6c8db60-1f5e-4a28-b969-6b4b3c59c7d8",
+        "source_urls": [
+          "https://job.10086.cn/personal/job/detail.html?id=a6c8db60-1f5e-4a28-b969-6b4b3c59c7d8"
+        ],
+        "fetched_at": "2026-08-28T07:47:54.267Z",
+        "match_confidence": "none",
+        "quality_warnings": [
+          "招聘人数未可靠标注，headcount 按 1 占位"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "query": {
+    "id": "c2-major-news-mianyang",
+    "stage": "city-major",
+    "rationale": "用已验证有效的专业目录词补查绵阳新闻传播岗位。",
+    "hypothesis": "绵阳科研院所岗位可能在专业字段写作新闻与传播类。",
+    "filters": {
+      "major": "新闻与传播",
+      "location": "绵阳",
+      "recruitType": "campus"
+    },
+    "limit": 50,
+    "scanLimit": 5000,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--major",
+      "新闻与传播",
+      "--location",
+      "绵阳",
+      "--type",
+      "campus",
+      "--limit",
+      "50",
+      "--scan-limit",
+      "5000"
+    ]
+  },
+  "execution": {
+    "command": "outputs/2026-08-28-news-communication-sichuan-constrained/guoyang-pro-local",
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--major",
+      "新闻与传播",
+      "--location",
+      "绵阳",
+      "--type",
+      "campus",
+      "--limit",
+      "50",
+      "--scan-limit",
+      "5000"
+    ],
+    "exitCode": 1,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T09:00:18.540Z",
+    "finishedAt": "2026-08-28T09:00:18.669Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": false,
+    "error": "所有实时源均失败，且没有可用的新鲜缓存",
+    "sources": [
+      {
+        "id": "china-mobile",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T09:00:18.644Z",
+        "error": "中国移动官方招聘接口网络/TLS不可达: getaddrinfo ENOTFOUND job.10086.cn"
+      },
+      {
+        "id": "cmb",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T09:00:18.657Z",
+        "error": "getaddrinfo ENOTFOUND career.cmbchina.com"
+      },
+      {
+        "id": "iguopin",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T09:00:18.658Z",
+        "error": "网络不可达(国聘 gp-api;受限网络/沙箱会失败,正常机器可访问)"
+      },
+      {
+        "id": "ncss",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T09:00:18.659Z",
+        "note": "fetch 失败:网络/超时,或接口被重定向到登录页。",
+        "error": "getaddrinfo ENOTFOUND www.ncss.cn"
+      }
+    ]
+  }
+}

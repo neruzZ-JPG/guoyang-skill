@@ -1,0 +1,96 @@
+{
+  "query": {
+    "id": "c2-broad-campus-yibin",
+    "stage": "city-broad",
+    "rationale": "扫描宜宾当前国央企校招岗位，观察地方制造与能源企业机会。",
+    "hypothesis": "宜宾产业国企可能设置品牌、市场或综合职能岗位。",
+    "filters": {
+      "location": "宜宾",
+      "recruitType": "campus"
+    },
+    "limit": 100,
+    "scanLimit": 5000,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "宜宾",
+      "--type",
+      "campus",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ]
+  },
+  "execution": {
+    "command": "outputs/2026-08-28-news-communication-sichuan-constrained/guoyang-pro-local",
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "宜宾",
+      "--type",
+      "campus",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ],
+    "exitCode": 1,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T08:59:56.157Z",
+    "finishedAt": "2026-08-28T09:00:11.286Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": false,
+    "error": "所有实时源均失败，且没有可用的新鲜缓存",
+    "sources": [
+      {
+        "id": "china-mobile",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T08:59:56.256Z",
+        "error": "中国移动官方招聘接口网络/TLS不可达: absolute timeout"
+      },
+      {
+        "id": "cmb",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T08:59:56.271Z",
+        "error": "socket timeout"
+      },
+      {
+        "id": "iguopin",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T08:59:56.271Z",
+        "error": "网络不可达(国聘 gp-api;受限网络/沙箱会失败,正常机器可访问)"
+      },
+      {
+        "id": "ncss",
+        "ok": false,
+        "count": 0,
+        "scanned": 0,
+        "exhausted": false,
+        "truncated": true,
+        "fetched_at": "2026-08-28T08:59:56.272Z",
+        "note": "fetch 失败:网络/超时,或接口被重定向到登录页。",
+        "error": "aborted"
+      }
+    ]
+  }
+}

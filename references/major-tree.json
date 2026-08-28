@@ -1,0 +1,1501 @@
+{
+  "version": "2.0.0",
+  "kind": "job-search-major-taxonomy",
+  "rootId": "any-major",
+  "policy": {
+    "siblingTraversal": false,
+    "relatedEdgesRequireReason": true,
+    "relatedEdgesAreCandidatesOnly": true,
+    "vectorUse": "optional-seed-recall-only"
+  },
+  "scope": {
+    "purpose": "国央企岗位检索时的专业放宽与相关方向召回",
+    "notOfficialCatalog": true,
+    "note": "层级参考常见学科门类与招聘专业表述，不能替代招聘公告中的官方专业目录和专业代码。"
+  },
+  "defaults": {
+    "beamWidth": 8,
+    "maxDepth": 5,
+    "maxCandidates": 24,
+    "minimumSeedScore": 0.58
+  },
+  "nodes": [
+    {
+      "id": "any-major",
+      "label": "专业不限",
+      "level": "root",
+      "aliases": ["不限专业", "不限", "专业不限"],
+      "queryTerms": ["专业不限", "不限专业"]
+    },
+    {
+      "id": "humanities-social-sciences",
+      "parentId": "any-major",
+      "label": "文科/人文社科",
+      "level": "broad",
+      "aliases": ["文科", "人文社科", "人文社会科学"],
+      "queryTerms": ["文科类", "人文社科类"],
+      "roleKeywords": ["综合管理", "行政", "文秘", "宣传"],
+      "relatedSectors": ["传媒文化"]
+    },
+    {
+      "id": "literature",
+      "parentId": "humanities-social-sciences",
+      "label": "文学",
+      "level": "discipline",
+      "aliases": ["文学门类", "文学类"],
+      "queryTerms": ["文学类"]
+    },
+    {
+      "id": "chinese-language",
+      "parentId": "literature",
+      "label": "中国语言文学类",
+      "level": "category",
+      "aliases": ["中文", "中文文学", "中国语言文学"],
+      "queryTerms": ["中国语言文学类", "中文类"],
+      "roleKeywords": ["文秘", "材料撰写", "行政", "党建", "宣传", "编辑"],
+      "relatedSectors": ["传媒文化"]
+    },
+    {
+      "id": "chinese-language-literature",
+      "parentId": "chinese-language",
+      "label": "汉语言文学",
+      "level": "major",
+      "aliases": ["汉语言文学专业"],
+      "queryTerms": ["汉语言文学"]
+    },
+    {
+      "id": "chinese-language-major",
+      "parentId": "chinese-language",
+      "label": "汉语言",
+      "level": "major",
+      "aliases": ["汉语言专业"],
+      "queryTerms": ["汉语言"]
+    },
+    {
+      "id": "secretarial-studies",
+      "parentId": "chinese-language",
+      "label": "秘书学",
+      "level": "major",
+      "aliases": ["文秘"],
+      "queryTerms": ["秘书学", "文秘"]
+    },
+    {
+      "id": "chinese-international-education",
+      "parentId": "chinese-language",
+      "label": "汉语国际教育",
+      "level": "major",
+      "aliases": ["对外汉语"],
+      "queryTerms": ["汉语国际教育", "对外汉语"]
+    },
+    {
+      "id": "journalism-communication",
+      "parentId": "literature",
+      "label": "新闻传播学类",
+      "level": "category",
+      "aliases": ["新闻传播", "新闻传播学"],
+      "queryTerms": ["新闻传播学类", "新闻传播"],
+      "roleKeywords": ["宣传", "品牌", "内容运营", "编辑", "记者", "新媒体", "文案", "融媒体", "舆情", "公关"],
+      "relatedSectors": ["传媒文化", "科技数字"]
+    },
+    {
+      "id": "journalism",
+      "parentId": "journalism-communication",
+      "label": "新闻学",
+      "level": "major",
+      "aliases": ["新闻专业"],
+      "queryTerms": ["新闻学", "新闻"]
+    },
+    {
+      "id": "communication",
+      "parentId": "journalism-communication",
+      "label": "传播学",
+      "level": "major",
+      "aliases": ["传播专业"],
+      "queryTerms": ["传播学", "传播"]
+    },
+    {
+      "id": "advertising",
+      "parentId": "journalism-communication",
+      "label": "广告学",
+      "level": "major",
+      "aliases": ["广告专业"],
+      "queryTerms": ["广告学", "广告"]
+    },
+    {
+      "id": "network-new-media",
+      "parentId": "journalism-communication",
+      "label": "网络与新媒体",
+      "level": "major",
+      "aliases": ["网络新媒体", "新媒体"],
+      "queryTerms": ["网络与新媒体", "新媒体"]
+    },
+    {
+      "id": "editing-publishing",
+      "parentId": "journalism-communication",
+      "label": "编辑出版学",
+      "level": "major",
+      "aliases": ["编辑出版"],
+      "queryTerms": ["编辑出版学", "编辑出版"]
+    },
+    {
+      "id": "international-journalism",
+      "parentId": "journalism-communication",
+      "label": "国际新闻与传播",
+      "level": "major",
+      "aliases": ["国际新闻"],
+      "queryTerms": ["国际新闻与传播", "国际新闻"]
+    },
+    {
+      "id": "foreign-language",
+      "parentId": "literature",
+      "label": "外国语言文学类",
+      "level": "category",
+      "aliases": ["外语类", "外国语言文学"],
+      "queryTerms": ["外国语言文学类", "外语类"],
+      "roleKeywords": ["国际业务", "海外业务", "翻译", "外贸", "商务管理"],
+      "relatedSectors": ["商贸物流", "建筑工程"]
+    },
+    {
+      "id": "english",
+      "parentId": "foreign-language",
+      "label": "英语",
+      "level": "major",
+      "aliases": ["英语专业", "商务英语"],
+      "queryTerms": ["英语", "商务英语"]
+    },
+    {
+      "id": "translation",
+      "parentId": "foreign-language",
+      "label": "翻译",
+      "level": "major",
+      "aliases": ["翻译专业"],
+      "queryTerms": ["翻译"]
+    },
+    {
+      "id": "other-foreign-language",
+      "parentId": "foreign-language",
+      "label": "其他外语",
+      "level": "major-group",
+      "aliases": ["俄语", "法语", "德语", "西班牙语", "阿拉伯语"],
+      "queryTerms": ["俄语", "法语", "德语", "西班牙语", "阿拉伯语"]
+    },
+    {
+      "id": "history",
+      "parentId": "humanities-social-sciences",
+      "label": "历史学门类",
+      "level": "discipline",
+      "aliases": ["历史门类"],
+      "queryTerms": ["历史学门类"]
+    },
+    {
+      "id": "history-category",
+      "parentId": "history",
+      "label": "历史学类",
+      "level": "category",
+      "aliases": ["历史类"],
+      "queryTerms": ["历史学类"]
+    },
+    {
+      "id": "history-major",
+      "parentId": "history-category",
+      "label": "历史学",
+      "level": "major",
+      "aliases": ["历史学专业"],
+      "queryTerms": ["历史学"]
+    },
+    {
+      "id": "archaeology",
+      "parentId": "history-category",
+      "label": "考古学",
+      "level": "major",
+      "aliases": ["考古"],
+      "queryTerms": ["考古学", "考古"]
+    },
+    {
+      "id": "philosophy",
+      "parentId": "humanities-social-sciences",
+      "label": "哲学",
+      "level": "discipline",
+      "aliases": ["哲学类"],
+      "queryTerms": ["哲学类", "哲学"]
+    },
+    {
+      "id": "law-discipline",
+      "parentId": "humanities-social-sciences",
+      "label": "法学门类",
+      "level": "discipline",
+      "aliases": ["法学门类"],
+      "queryTerms": ["法学门类"]
+    },
+    {
+      "id": "law",
+      "parentId": "law-discipline",
+      "label": "法学类",
+      "level": "category",
+      "aliases": ["法律类", "法律"],
+      "queryTerms": ["法学类", "法律类"],
+      "roleKeywords": ["法务", "合规", "风控", "纪检", "审计", "合同管理"],
+      "relatedSectors": ["金融银行", "证券保险"]
+    },
+    {
+      "id": "law-major",
+      "parentId": "law",
+      "label": "法学",
+      "level": "major",
+      "aliases": ["法律专业"],
+      "queryTerms": ["法学", "法律"]
+    },
+    {
+      "id": "intellectual-property",
+      "parentId": "law",
+      "label": "知识产权",
+      "level": "major",
+      "aliases": ["知识产权法"],
+      "queryTerms": ["知识产权"]
+    },
+    {
+      "id": "politics-sociology",
+      "parentId": "law-discipline",
+      "label": "政治学与社会学类",
+      "level": "category",
+      "aliases": ["政治学类", "社会学类"],
+      "queryTerms": ["政治学类", "社会学类"],
+      "roleKeywords": ["党建", "党务", "社会责任", "公共事务"]
+    },
+    {
+      "id": "social-work",
+      "parentId": "politics-sociology",
+      "label": "社会工作",
+      "level": "major",
+      "aliases": ["社工"],
+      "queryTerms": ["社会工作"]
+    },
+    {
+      "id": "economics-discipline",
+      "parentId": "humanities-social-sciences",
+      "label": "经济学门类",
+      "level": "discipline",
+      "aliases": ["经济学门类", "经济类"],
+      "queryTerms": ["经济学门类", "经济类"]
+    },
+    {
+      "id": "economics",
+      "parentId": "economics-discipline",
+      "label": "经济学类",
+      "level": "category",
+      "aliases": ["经济类"],
+      "queryTerms": ["经济学类", "经济类"],
+      "roleKeywords": ["行业研究", "经济分析", "市场分析", "战略规划"],
+      "relatedSectors": ["金融银行", "证券保险"]
+    },
+    {
+      "id": "economics-major",
+      "parentId": "economics",
+      "label": "经济学",
+      "level": "major",
+      "aliases": ["经济学专业"],
+      "queryTerms": ["经济学"]
+    },
+    {
+      "id": "finance",
+      "parentId": "economics-discipline",
+      "label": "金融学类",
+      "level": "category",
+      "aliases": ["金融类"],
+      "queryTerms": ["金融学类", "金融类"],
+      "roleKeywords": ["投融资", "资金管理", "金融业务", "资产管理", "风控"],
+      "relatedSectors": ["金融银行", "证券保险"]
+    },
+    {
+      "id": "finance-major",
+      "parentId": "finance",
+      "label": "金融学",
+      "level": "major",
+      "aliases": ["金融专业"],
+      "queryTerms": ["金融学", "金融"]
+    },
+    {
+      "id": "financial-engineering",
+      "parentId": "finance",
+      "label": "金融工程",
+      "level": "major",
+      "aliases": ["金融工程专业"],
+      "queryTerms": ["金融工程"]
+    },
+    {
+      "id": "insurance-investment",
+      "parentId": "finance",
+      "label": "保险与投资",
+      "level": "major-group",
+      "aliases": ["保险学", "投资学"],
+      "queryTerms": ["保险学", "投资学"]
+    },
+    {
+      "id": "public-finance-taxation",
+      "parentId": "economics-discipline",
+      "label": "财政学类",
+      "level": "category",
+      "aliases": ["财政税务", "财税类"],
+      "queryTerms": ["财政学类", "财政学", "税收学"],
+      "roleKeywords": ["财税", "税务", "预算管理", "财政分析"],
+      "relatedSectors": ["金融银行", "证券保险"]
+    },
+    {
+      "id": "international-economics-trade",
+      "parentId": "economics-discipline",
+      "label": "经济与贸易类",
+      "level": "category",
+      "aliases": ["国际贸易", "国贸"],
+      "queryTerms": ["经济与贸易类", "国际经济与贸易", "国际贸易"],
+      "roleKeywords": ["国际业务", "贸易", "商务拓展", "供应链"],
+      "relatedSectors": ["商贸物流", "金融银行"]
+    },
+    {
+      "id": "management",
+      "parentId": "humanities-social-sciences",
+      "label": "管理学",
+      "level": "discipline",
+      "aliases": ["管理学门类", "管理类"],
+      "queryTerms": ["管理学类", "管理类"]
+    },
+    {
+      "id": "business-administration",
+      "parentId": "management",
+      "label": "工商管理类",
+      "level": "category",
+      "aliases": ["工商管理"],
+      "queryTerms": ["工商管理类"],
+      "roleKeywords": ["财务", "会计", "审计", "税务", "人力资源", "运营管理", "市场营销"],
+      "relatedSectors": ["金融银行", "证券保险", "商贸物流"]
+    },
+    {
+      "id": "accounting",
+      "parentId": "business-administration",
+      "label": "会计学",
+      "level": "major",
+      "aliases": ["会计"],
+      "queryTerms": ["会计学", "会计"]
+    },
+    {
+      "id": "financial-management",
+      "parentId": "business-administration",
+      "label": "财务管理",
+      "level": "major",
+      "aliases": ["财管"],
+      "queryTerms": ["财务管理"]
+    },
+    {
+      "id": "auditing",
+      "parentId": "business-administration",
+      "label": "审计学",
+      "level": "major",
+      "aliases": ["审计"],
+      "queryTerms": ["审计学", "审计"]
+    },
+    {
+      "id": "human-resources",
+      "parentId": "business-administration",
+      "label": "人力资源管理",
+      "level": "major",
+      "aliases": ["人力资源", "人资"],
+      "queryTerms": ["人力资源管理", "人力资源"]
+    },
+    {
+      "id": "marketing",
+      "parentId": "business-administration",
+      "label": "市场营销",
+      "level": "major",
+      "aliases": ["营销"],
+      "queryTerms": ["市场营销"]
+    },
+    {
+      "id": "public-management",
+      "parentId": "management",
+      "label": "公共管理类",
+      "level": "category",
+      "aliases": ["公共管理"],
+      "queryTerms": ["公共管理类"],
+      "roleKeywords": ["行政管理", "公共事务", "综合管理"]
+    },
+    {
+      "id": "administrative-management",
+      "parentId": "public-management",
+      "label": "行政管理",
+      "level": "major",
+      "aliases": ["行政管理专业"],
+      "queryTerms": ["行政管理"]
+    },
+    {
+      "id": "labor-social-security",
+      "parentId": "public-management",
+      "label": "劳动与社会保障",
+      "level": "major",
+      "aliases": ["劳动保障", "社会保障"],
+      "queryTerms": ["劳动与社会保障", "社会保障"]
+    },
+    {
+      "id": "land-resource-management",
+      "parentId": "public-management",
+      "label": "土地资源管理",
+      "level": "major",
+      "aliases": ["土地管理", "国土资源管理"],
+      "queryTerms": ["土地资源管理", "国土资源管理"],
+      "roleKeywords": ["土地管理", "资产管理", "规划管理"],
+      "relatedSectors": ["地方城投", "建筑工程"]
+    },
+    {
+      "id": "library-archives",
+      "parentId": "management",
+      "label": "图书情报与档案管理类",
+      "level": "category",
+      "aliases": ["图书情报", "档案管理"],
+      "queryTerms": ["图书情报与档案管理类", "档案学", "信息资源管理"],
+      "roleKeywords": ["档案管理", "知识管理", "信息资源管理"]
+    },
+    {
+      "id": "management-science-engineering",
+      "parentId": "management",
+      "label": "管理科学与工程类",
+      "level": "category",
+      "aliases": ["管理科学与工程", "信息管理"],
+      "queryTerms": ["管理科学与工程类"],
+      "roleKeywords": ["项目管理", "运营分析", "信息管理", "供应链管理"],
+      "relatedSectors": ["科技数字", "建筑工程", "商贸物流"]
+    },
+    {
+      "id": "information-management",
+      "parentId": "management-science-engineering",
+      "label": "信息管理与信息系统",
+      "level": "major",
+      "aliases": ["信息管理", "信管"],
+      "queryTerms": ["信息管理与信息系统", "信息管理"]
+    },
+    {
+      "id": "big-data-management",
+      "parentId": "management-science-engineering",
+      "label": "大数据管理与应用",
+      "level": "major",
+      "aliases": ["大数据管理"],
+      "queryTerms": ["大数据管理与应用"]
+    },
+    {
+      "id": "logistics-ecommerce",
+      "parentId": "management",
+      "label": "物流与电子商务类",
+      "level": "category",
+      "aliases": ["物流管理类", "电子商务类"],
+      "queryTerms": ["物流管理", "电子商务"],
+      "roleKeywords": ["供应链", "采购", "仓储", "物流运营", "电子商务"],
+      "relatedSectors": ["商贸物流"]
+    },
+    {
+      "id": "tourism-management",
+      "parentId": "management",
+      "label": "旅游管理类",
+      "level": "category",
+      "aliases": ["旅游管理", "酒店管理"],
+      "queryTerms": ["旅游管理类", "旅游管理", "酒店管理"],
+      "roleKeywords": ["文旅运营", "酒店管理", "景区运营"],
+      "relatedSectors": ["传媒文化", "商贸物流"]
+    },
+    {
+      "id": "education-discipline",
+      "parentId": "humanities-social-sciences",
+      "label": "教育学",
+      "level": "discipline",
+      "aliases": ["教育学门类"],
+      "queryTerms": ["教育学类"]
+    },
+    {
+      "id": "education",
+      "parentId": "education-discipline",
+      "label": "教育学类",
+      "level": "category",
+      "aliases": ["教育类"],
+      "queryTerms": ["教育学类", "教育类"],
+      "roleKeywords": ["培训", "人才发展", "课程开发", "企业大学"]
+    },
+    {
+      "id": "pedagogy",
+      "parentId": "education",
+      "label": "教育学",
+      "level": "major",
+      "aliases": ["教育学专业"],
+      "queryTerms": ["教育学"]
+    },
+    {
+      "id": "educational-technology",
+      "parentId": "education",
+      "label": "教育技术学",
+      "level": "major",
+      "aliases": ["教育技术"],
+      "queryTerms": ["教育技术学"]
+    },
+    {
+      "id": "physical-education",
+      "parentId": "education-discipline",
+      "label": "体育学类",
+      "level": "category",
+      "aliases": ["体育类", "体育教育"],
+      "queryTerms": ["体育学类", "体育教育"]
+    },
+    {
+      "id": "art-discipline",
+      "parentId": "humanities-social-sciences",
+      "label": "艺术学",
+      "level": "discipline",
+      "aliases": ["艺术学门类", "艺术类"],
+      "queryTerms": ["艺术学类", "艺术类"]
+    },
+    {
+      "id": "design",
+      "parentId": "art-discipline",
+      "label": "设计学类",
+      "level": "category",
+      "aliases": ["设计类"],
+      "queryTerms": ["设计学类", "设计类"],
+      "roleKeywords": ["视觉设计", "品牌设计", "交互设计", "产品设计"],
+      "relatedSectors": ["传媒文化", "科技数字"]
+    },
+    {
+      "id": "visual-communication-design",
+      "parentId": "design",
+      "label": "视觉传达设计",
+      "level": "major",
+      "aliases": ["视觉设计", "平面设计"],
+      "queryTerms": ["视觉传达设计", "视觉设计"]
+    },
+    {
+      "id": "product-design",
+      "parentId": "design",
+      "label": "产品设计",
+      "level": "major",
+      "aliases": ["工业产品设计"],
+      "queryTerms": ["产品设计"]
+    },
+    {
+      "id": "digital-media-art",
+      "parentId": "design",
+      "label": "数字媒体艺术",
+      "level": "major",
+      "aliases": ["数字媒体设计"],
+      "queryTerms": ["数字媒体艺术", "数字媒体设计"]
+    },
+    {
+      "id": "drama-film-television",
+      "parentId": "art-discipline",
+      "label": "戏剧与影视学类",
+      "level": "category",
+      "aliases": ["影视类", "戏剧影视"],
+      "queryTerms": ["戏剧与影视学类", "影视类"],
+      "roleKeywords": ["影视制作", "编导", "播音主持", "动画", "内容制作"],
+      "relatedSectors": ["传媒文化"]
+    },
+    {
+      "id": "broadcasting-hosting",
+      "parentId": "drama-film-television",
+      "label": "播音与主持艺术",
+      "level": "major",
+      "aliases": ["播音主持"],
+      "queryTerms": ["播音与主持艺术", "播音主持"]
+    },
+    {
+      "id": "radio-tv-directing",
+      "parentId": "drama-film-television",
+      "label": "广播电视编导",
+      "level": "major",
+      "aliases": ["广电编导", "编导"],
+      "queryTerms": ["广播电视编导", "编导"]
+    },
+    {
+      "id": "animation",
+      "parentId": "drama-film-television",
+      "label": "动画",
+      "level": "major",
+      "aliases": ["动画专业"],
+      "queryTerms": ["动画"]
+    },
+    {
+      "id": "fine-arts",
+      "parentId": "art-discipline",
+      "label": "美术学类",
+      "level": "category",
+      "aliases": ["美术类", "绘画"],
+      "queryTerms": ["美术学类", "美术类"]
+    },
+    {
+      "id": "music-dance",
+      "parentId": "art-discipline",
+      "label": "音乐与舞蹈学类",
+      "level": "category",
+      "aliases": ["音乐类", "舞蹈类"],
+      "queryTerms": ["音乐与舞蹈学类", "音乐类", "舞蹈类"]
+    },
+    {
+      "id": "science-engineering",
+      "parentId": "any-major",
+      "label": "理工科",
+      "level": "broad",
+      "aliases": ["理科", "工科", "理工类"],
+      "queryTerms": ["理工科", "理工类"]
+    },
+    {
+      "id": "science",
+      "parentId": "science-engineering",
+      "label": "理学",
+      "level": "discipline",
+      "aliases": ["理学门类", "理学类"],
+      "queryTerms": ["理学类"]
+    },
+    {
+      "id": "mathematics-statistics",
+      "parentId": "science",
+      "label": "数学与统计学类",
+      "level": "category",
+      "aliases": ["数学类", "统计学类"],
+      "queryTerms": ["数学类", "统计学类"],
+      "roleKeywords": ["数据分析", "量化分析", "精算", "算法", "风险模型"],
+      "relatedSectors": ["科技数字", "金融银行", "证券保险"]
+    },
+    {
+      "id": "mathematics",
+      "parentId": "mathematics-statistics",
+      "label": "数学与应用数学",
+      "level": "major",
+      "aliases": ["数学", "应用数学", "信息与计算科学"],
+      "queryTerms": ["数学与应用数学", "数学", "信息与计算科学"]
+    },
+    {
+      "id": "statistics",
+      "parentId": "mathematics-statistics",
+      "label": "统计学",
+      "level": "major",
+      "aliases": ["应用统计学", "应用统计"],
+      "queryTerms": ["统计学", "应用统计学"]
+    },
+    {
+      "id": "physics",
+      "parentId": "science",
+      "label": "物理学类",
+      "level": "category",
+      "aliases": ["物理类", "物理学"],
+      "queryTerms": ["物理学类", "物理学"],
+      "roleKeywords": ["物理分析", "光电", "实验", "测试"],
+      "relatedSectors": ["科技数字", "航空航天军工", "能源电力"]
+    },
+    {
+      "id": "applied-physics",
+      "parentId": "physics",
+      "label": "应用物理学",
+      "level": "major",
+      "aliases": ["应用物理"],
+      "queryTerms": ["应用物理学", "应用物理"]
+    },
+    {
+      "id": "chemistry-science",
+      "parentId": "science",
+      "label": "化学类",
+      "level": "category",
+      "aliases": ["化学专业类"],
+      "queryTerms": ["化学类"],
+      "roleKeywords": ["化学分析", "实验检测", "质量控制", "研发"],
+      "relatedSectors": ["油气化工", "医药健康"]
+    },
+    {
+      "id": "chemistry-major",
+      "parentId": "chemistry-science",
+      "label": "化学",
+      "level": "major",
+      "aliases": ["化学专业"],
+      "queryTerms": ["化学"]
+    },
+    {
+      "id": "applied-chemistry",
+      "parentId": "chemistry-science",
+      "label": "应用化学",
+      "level": "major",
+      "aliases": ["应用化学专业"],
+      "queryTerms": ["应用化学"]
+    },
+    {
+      "id": "biology",
+      "parentId": "science",
+      "label": "生物科学类",
+      "level": "category",
+      "aliases": ["生物类", "生命科学"],
+      "queryTerms": ["生物科学类", "生物类"],
+      "roleKeywords": ["生物研发", "检验", "质量管理", "实验"],
+      "relatedSectors": ["医药健康", "农业粮食"]
+    },
+    {
+      "id": "biological-science",
+      "parentId": "biology",
+      "label": "生物科学",
+      "level": "major",
+      "aliases": ["生物学"],
+      "queryTerms": ["生物科学", "生物学"]
+    },
+    {
+      "id": "biotechnology",
+      "parentId": "biology",
+      "label": "生物技术",
+      "level": "major",
+      "aliases": ["生物工程技术"],
+      "queryTerms": ["生物技术"]
+    },
+    {
+      "id": "geography",
+      "parentId": "science",
+      "label": "地理科学类",
+      "level": "category",
+      "aliases": ["地理类", "地理信息"],
+      "queryTerms": ["地理科学类"],
+      "roleKeywords": ["地理信息", "空间分析", "规划", "遥感"],
+      "relatedSectors": ["地方城投", "交通运输", "科技数字"]
+    },
+    {
+      "id": "geographic-information-science",
+      "parentId": "geography",
+      "label": "地理信息科学",
+      "level": "major",
+      "aliases": ["GIS", "地理信息系统"],
+      "queryTerms": ["地理信息科学", "地理信息系统"]
+    },
+    {
+      "id": "geology-science",
+      "parentId": "science",
+      "label": "地质学类",
+      "level": "category",
+      "aliases": ["地质类", "地球科学"],
+      "queryTerms": ["地质学类", "地质类"],
+      "roleKeywords": ["地质勘探", "矿产勘查", "地球化学"],
+      "relatedSectors": ["油气化工", "钢铁有色"]
+    },
+    {
+      "id": "geology-major",
+      "parentId": "geology-science",
+      "label": "地质学",
+      "level": "major",
+      "aliases": ["地质学专业"],
+      "queryTerms": ["地质学"]
+    },
+    {
+      "id": "atmospheric-ocean-science",
+      "parentId": "science",
+      "label": "大气与海洋科学类",
+      "level": "category",
+      "aliases": ["大气科学", "海洋科学", "气象"],
+      "queryTerms": ["大气科学类", "海洋科学类", "气象类"],
+      "roleKeywords": ["气象", "海洋监测", "环境监测", "数值预报"],
+      "relatedSectors": ["能源电力", "交通运输"]
+    },
+    {
+      "id": "psychology",
+      "parentId": "science",
+      "label": "心理学类",
+      "level": "category",
+      "aliases": ["心理学", "应用心理"],
+      "queryTerms": ["心理学类", "心理学", "应用心理学"],
+      "roleKeywords": ["人才测评", "员工关系", "组织发展", "用户研究"]
+    },
+    {
+      "id": "engineering",
+      "parentId": "science-engineering",
+      "label": "工学",
+      "level": "discipline",
+      "aliases": ["工学门类", "工学类"],
+      "queryTerms": ["工学类"]
+    },
+    {
+      "id": "computer",
+      "parentId": "engineering",
+      "label": "计算机类",
+      "level": "category",
+      "aliases": ["计算机", "计算机专业类"],
+      "queryTerms": ["计算机类"],
+      "roleKeywords": ["软件开发", "数据分析", "算法", "人工智能", "网络安全", "信息化", "数字化", "运维"],
+      "relatedSectors": ["科技数字", "电信运营"]
+    },
+    {
+      "id": "instrumentation",
+      "parentId": "engineering",
+      "label": "仪器类",
+      "level": "category",
+      "aliases": ["仪器仪表类", "测控类"],
+      "queryTerms": ["仪器类", "仪器仪表类"],
+      "roleKeywords": ["测控", "仪器仪表", "测试", "计量"],
+      "relatedSectors": ["建材机械", "能源电力", "航空航天军工"]
+    },
+    {
+      "id": "measurement-control-major",
+      "parentId": "instrumentation",
+      "label": "测控技术与仪器",
+      "level": "major",
+      "aliases": ["测控技术", "测控"],
+      "queryTerms": ["测控技术与仪器", "测控技术"]
+    },
+    {
+      "id": "computer-science",
+      "parentId": "computer",
+      "label": "计算机科学与技术",
+      "level": "major",
+      "aliases": ["计算机科学"],
+      "queryTerms": ["计算机科学与技术"]
+    },
+    {
+      "id": "software-engineering",
+      "parentId": "computer",
+      "label": "软件工程",
+      "level": "major",
+      "aliases": ["软件"],
+      "queryTerms": ["软件工程"]
+    },
+    {
+      "id": "network-information-security",
+      "parentId": "computer",
+      "label": "网络与信息安全",
+      "level": "major-group",
+      "aliases": ["网络工程", "信息安全", "网络安全"],
+      "queryTerms": ["网络工程", "信息安全"]
+    },
+    {
+      "id": "data-ai",
+      "parentId": "computer",
+      "label": "数据科学与人工智能",
+      "level": "major-group",
+      "aliases": ["数据科学", "大数据", "人工智能"],
+      "queryTerms": ["数据科学与大数据技术", "人工智能"]
+    },
+    {
+      "id": "electronic-information",
+      "parentId": "engineering",
+      "label": "电子信息类",
+      "level": "category",
+      "aliases": ["电子信息", "通信类"],
+      "queryTerms": ["电子信息类"],
+      "roleKeywords": ["通信", "硬件开发", "芯片", "射频", "嵌入式", "信号处理", "网络规划"],
+      "relatedSectors": ["电信运营", "科技数字", "航空航天军工"]
+    },
+    {
+      "id": "electronic-information-major",
+      "parentId": "electronic-information",
+      "label": "电子信息工程",
+      "level": "major",
+      "aliases": ["电子信息工程专业"],
+      "queryTerms": ["电子信息工程"]
+    },
+    {
+      "id": "communication-engineering",
+      "parentId": "electronic-information",
+      "label": "通信工程",
+      "level": "major",
+      "aliases": ["通信"],
+      "queryTerms": ["通信工程"]
+    },
+    {
+      "id": "electronic-science-technology",
+      "parentId": "electronic-information",
+      "label": "电子科学与技术",
+      "level": "major",
+      "aliases": ["电子科学", "电子技术"],
+      "queryTerms": ["电子科学与技术"]
+    },
+    {
+      "id": "microelectronics-integrated-circuits",
+      "parentId": "electronic-information",
+      "label": "微电子与集成电路",
+      "level": "major-group",
+      "aliases": ["微电子", "集成电路"],
+      "queryTerms": ["微电子科学与工程", "集成电路设计与集成系统"]
+    },
+    {
+      "id": "automation-electrical",
+      "parentId": "engineering",
+      "label": "自动化与电气类",
+      "level": "category",
+      "aliases": ["自动化类", "电气类", "电气工程"],
+      "queryTerms": ["自动化类", "电气类"],
+      "roleKeywords": ["电气", "自动化", "设备管理", "生产技术", "电网运行", "仪控"],
+      "relatedSectors": ["能源电力", "建材机械"]
+    },
+    {
+      "id": "automation",
+      "parentId": "automation-electrical",
+      "label": "自动化",
+      "level": "major",
+      "aliases": ["自动化专业"],
+      "queryTerms": ["自动化"]
+    },
+    {
+      "id": "electrical-engineering",
+      "parentId": "automation-electrical",
+      "label": "电气工程及其自动化",
+      "level": "major",
+      "aliases": ["电气工程", "电气"],
+      "queryTerms": ["电气工程及其自动化", "电气类"]
+    },
+    {
+      "id": "mechanical",
+      "parentId": "engineering",
+      "label": "机械类",
+      "level": "category",
+      "aliases": ["机械", "机电类"],
+      "queryTerms": ["机械类"],
+      "roleKeywords": ["机械设计", "设备管理", "工艺", "制造", "检修", "研发工程师"],
+      "relatedSectors": ["建材机械", "汽车制造", "航空航天军工"]
+    },
+    {
+      "id": "mechanical-engineering",
+      "parentId": "mechanical",
+      "label": "机械工程",
+      "level": "major",
+      "aliases": ["机械设计制造及其自动化", "机械设计"],
+      "queryTerms": ["机械工程", "机械设计制造及其自动化"]
+    },
+    {
+      "id": "vehicle-engineering",
+      "parentId": "mechanical",
+      "label": "车辆工程",
+      "level": "major",
+      "aliases": ["汽车工程"],
+      "queryTerms": ["车辆工程"]
+    },
+    {
+      "id": "materials",
+      "parentId": "engineering",
+      "label": "材料类",
+      "level": "category",
+      "aliases": ["材料", "材料专业类"],
+      "queryTerms": ["材料类"],
+      "roleKeywords": ["材料研发", "工艺", "质量管理", "冶金", "检测"],
+      "relatedSectors": ["钢铁有色", "建材机械", "航空航天军工"]
+    },
+    {
+      "id": "materials-science",
+      "parentId": "materials",
+      "label": "材料科学与工程",
+      "level": "major",
+      "aliases": ["材料科学", "材料工程"],
+      "queryTerms": ["材料科学与工程"]
+    },
+    {
+      "id": "metallurgy-polymer",
+      "parentId": "materials",
+      "label": "冶金与高分子材料",
+      "level": "major-group",
+      "aliases": ["冶金工程", "高分子材料与工程", "金属材料工程"],
+      "queryTerms": ["冶金工程", "高分子材料与工程", "金属材料工程"]
+    },
+    {
+      "id": "civil-architecture",
+      "parentId": "engineering",
+      "label": "土木与建筑类",
+      "level": "category",
+      "aliases": ["土木类", "建筑类"],
+      "queryTerms": ["土木类", "建筑类"],
+      "roleKeywords": ["工程管理", "施工管理", "项目管理", "造价", "设计", "安全管理"],
+      "relatedSectors": ["建筑工程", "交通运输", "地方城投"]
+    },
+    {
+      "id": "civil-engineering",
+      "parentId": "civil-architecture",
+      "label": "土木工程",
+      "level": "major",
+      "aliases": ["土木"],
+      "queryTerms": ["土木工程"]
+    },
+    {
+      "id": "architecture-planning",
+      "parentId": "civil-architecture",
+      "label": "建筑与城乡规划",
+      "level": "major-group",
+      "aliases": ["建筑学", "城乡规划", "测绘工程"],
+      "queryTerms": ["建筑学", "城乡规划", "测绘工程"]
+    },
+    {
+      "id": "engineering-management",
+      "parentId": "civil-architecture",
+      "label": "工程管理与造价",
+      "level": "major-group",
+      "aliases": ["工程管理", "工程造价"],
+      "queryTerms": ["工程管理", "工程造价"]
+    },
+    {
+      "id": "chemistry-chemical",
+      "parentId": "engineering",
+      "label": "化工与制药类",
+      "level": "category",
+      "aliases": ["化工类", "化学工程类"],
+      "queryTerms": ["化工与制药类", "化工类"],
+      "roleKeywords": ["化工工艺", "研发", "分析检测", "生产技术", "质量管理", "安全环保"],
+      "relatedSectors": ["油气化工", "医药健康"]
+    },
+    {
+      "id": "chemical-engineering",
+      "parentId": "chemistry-chemical",
+      "label": "化学工程与工艺",
+      "level": "major",
+      "aliases": ["化学工程", "能源化学工程"],
+      "queryTerms": ["化学工程与工艺", "能源化学工程"]
+    },
+    {
+      "id": "pharmaceutical-engineering",
+      "parentId": "chemistry-chemical",
+      "label": "制药工程",
+      "level": "major",
+      "aliases": ["化学制药工程"],
+      "queryTerms": ["制药工程"]
+    },
+    {
+      "id": "energy-power",
+      "parentId": "engineering",
+      "label": "能源动力类",
+      "level": "category",
+      "aliases": ["能源与动力", "新能源", "储能", "核工程"],
+      "queryTerms": ["能源动力类"],
+      "roleKeywords": ["发电运行", "新能源", "热能", "储能", "核电", "生产技术"],
+      "relatedSectors": ["能源电力", "油气化工"]
+    },
+    {
+      "id": "energy-power-engineering",
+      "parentId": "energy-power",
+      "label": "能源与动力工程",
+      "level": "major",
+      "aliases": ["热能与动力工程"],
+      "queryTerms": ["能源与动力工程"]
+    },
+    {
+      "id": "new-energy-storage",
+      "parentId": "energy-power",
+      "label": "新能源与储能",
+      "level": "major-group",
+      "aliases": ["新能源科学与工程", "储能科学与工程"],
+      "queryTerms": ["新能源科学与工程", "储能科学与工程"]
+    },
+    {
+      "id": "transportation",
+      "parentId": "engineering",
+      "label": "交通运输类",
+      "level": "category",
+      "aliases": ["交通类", "物流工程", "航海技术"],
+      "queryTerms": ["交通运输类"],
+      "roleKeywords": ["运输组织", "物流管理", "航运", "轨道交通", "机场运行", "调度"],
+      "relatedSectors": ["交通运输", "商贸物流"]
+    },
+    {
+      "id": "transportation-major",
+      "parentId": "transportation",
+      "label": "交通运输",
+      "level": "major",
+      "aliases": ["交通工程"],
+      "queryTerms": ["交通运输", "交通工程"]
+    },
+    {
+      "id": "logistics-engineering",
+      "parentId": "transportation",
+      "label": "物流工程",
+      "level": "major",
+      "aliases": ["物流管理"],
+      "queryTerms": ["物流工程", "物流管理"]
+    },
+    {
+      "id": "environment-safety",
+      "parentId": "engineering",
+      "label": "环境与安全类",
+      "level": "category",
+      "aliases": ["环境科学与工程类", "安全科学与工程类"],
+      "queryTerms": ["环境科学与工程类", "安全科学与工程类"],
+      "roleKeywords": ["环保", "安全管理", "HSE", "节能", "碳管理", "应急管理"],
+      "relatedSectors": ["能源电力", "油气化工", "建筑工程"]
+    },
+    {
+      "id": "environment-engineering",
+      "parentId": "environment-safety",
+      "label": "环境工程",
+      "level": "major",
+      "aliases": ["环境科学"],
+      "queryTerms": ["环境工程", "环境科学"]
+    },
+    {
+      "id": "safety-engineering",
+      "parentId": "environment-safety",
+      "label": "安全工程",
+      "level": "major",
+      "aliases": ["应急技术与管理"],
+      "queryTerms": ["安全工程", "应急技术与管理"]
+    },
+    {
+      "id": "aerospace",
+      "parentId": "engineering",
+      "label": "航空航天类",
+      "level": "category",
+      "aliases": ["航空宇航", "飞行器类"],
+      "queryTerms": ["航空航天类", "飞行器类"],
+      "roleKeywords": ["总体设计", "结构设计", "航空发动机", "可靠性", "试验"],
+      "relatedSectors": ["航空航天军工"]
+    },
+    {
+      "id": "mining-geology-engineering",
+      "parentId": "engineering",
+      "label": "矿业与地质工程类",
+      "level": "category",
+      "aliases": ["矿业类", "地质工程类", "采矿类"],
+      "queryTerms": ["矿业类", "地质工程类"],
+      "roleKeywords": ["采矿", "选矿", "地质勘查", "矿山安全", "油气勘探"],
+      "relatedSectors": ["油气化工", "钢铁有色", "能源电力"]
+    },
+    {
+      "id": "mining-engineering",
+      "parentId": "mining-geology-engineering",
+      "label": "采矿工程",
+      "level": "major",
+      "aliases": ["采矿"],
+      "queryTerms": ["采矿工程"]
+    },
+    {
+      "id": "petroleum-engineering",
+      "parentId": "mining-geology-engineering",
+      "label": "石油工程",
+      "level": "major",
+      "aliases": ["油气田开发工程"],
+      "queryTerms": ["石油工程"]
+    },
+    {
+      "id": "geological-engineering",
+      "parentId": "mining-geology-engineering",
+      "label": "地质工程",
+      "level": "major",
+      "aliases": ["勘查技术与工程", "资源勘查工程"],
+      "queryTerms": ["地质工程", "勘查技术与工程", "资源勘查工程"]
+    },
+    {
+      "id": "water-conservancy",
+      "parentId": "engineering",
+      "label": "水利类",
+      "level": "category",
+      "aliases": ["水利工程类", "水电类"],
+      "queryTerms": ["水利类", "水利工程类"],
+      "roleKeywords": ["水利工程", "水电工程", "水文", "水资源管理"],
+      "relatedSectors": ["能源电力", "建筑工程"]
+    },
+    {
+      "id": "water-resources-engineering",
+      "parentId": "water-conservancy",
+      "label": "水利水电工程",
+      "level": "major",
+      "aliases": ["水利工程", "水电工程"],
+      "queryTerms": ["水利水电工程", "水利工程"]
+    },
+    {
+      "id": "hydrology-water-resources",
+      "parentId": "water-conservancy",
+      "label": "水文与水资源工程",
+      "level": "major",
+      "aliases": ["水文水资源"],
+      "queryTerms": ["水文与水资源工程"]
+    },
+    {
+      "id": "surveying-mapping",
+      "parentId": "engineering",
+      "label": "测绘类",
+      "level": "category",
+      "aliases": ["测绘工程类", "遥感类"],
+      "queryTerms": ["测绘类", "测绘工程类"],
+      "roleKeywords": ["工程测量", "测绘", "遥感", "地理信息"],
+      "relatedSectors": ["建筑工程", "交通运输", "地方城投"]
+    },
+    {
+      "id": "surveying-engineering",
+      "parentId": "surveying-mapping",
+      "label": "测绘工程",
+      "level": "major",
+      "aliases": ["工程测量"],
+      "queryTerms": ["测绘工程", "工程测量"]
+    },
+    {
+      "id": "remote-sensing",
+      "parentId": "surveying-mapping",
+      "label": "遥感科学与技术",
+      "level": "major",
+      "aliases": ["遥感"],
+      "queryTerms": ["遥感科学与技术", "遥感"]
+    },
+    {
+      "id": "naval-ocean-engineering",
+      "parentId": "engineering",
+      "label": "海洋工程与船舶类",
+      "level": "category",
+      "aliases": ["船舶类", "海洋工程类"],
+      "queryTerms": ["海洋工程类", "船舶与海洋工程"],
+      "roleKeywords": ["船舶设计", "海洋工程", "轮机", "航运装备"],
+      "relatedSectors": ["交通运输", "航空航天军工"]
+    },
+    {
+      "id": "naval-architecture-ocean-engineering",
+      "parentId": "naval-ocean-engineering",
+      "label": "船舶与海洋工程",
+      "level": "major",
+      "aliases": ["船舶工程", "海洋工程"],
+      "queryTerms": ["船舶与海洋工程"]
+    },
+    {
+      "id": "nuclear-engineering",
+      "parentId": "engineering",
+      "label": "核工程类",
+      "level": "category",
+      "aliases": ["核科学与工程", "核技术"],
+      "queryTerms": ["核工程类", "核工程与核技术"],
+      "roleKeywords": ["核电", "辐射防护", "核安全", "核技术"],
+      "relatedSectors": ["能源电力", "航空航天军工"]
+    },
+    {
+      "id": "nuclear-engineering-technology",
+      "parentId": "nuclear-engineering",
+      "label": "核工程与核技术",
+      "level": "major",
+      "aliases": ["核工程"],
+      "queryTerms": ["核工程与核技术", "核工程"]
+    },
+    {
+      "id": "industrial-engineering",
+      "parentId": "engineering",
+      "label": "工业工程类",
+      "level": "category",
+      "aliases": ["工业工程", "质量工程"],
+      "queryTerms": ["工业工程类", "工业工程"],
+      "roleKeywords": ["生产管理", "精益管理", "质量管理", "流程优化"],
+      "relatedSectors": ["汽车制造", "建材机械", "商贸物流"]
+    },
+    {
+      "id": "food-science-engineering",
+      "parentId": "engineering",
+      "label": "食品科学与工程类",
+      "level": "category",
+      "aliases": ["食品类", "食品工程"],
+      "queryTerms": ["食品科学与工程类", "食品类"],
+      "roleKeywords": ["食品研发", "质量管理", "食品安全", "生产工艺"],
+      "relatedSectors": ["农业粮食"]
+    },
+    {
+      "id": "food-science",
+      "parentId": "food-science-engineering",
+      "label": "食品科学与工程",
+      "level": "major",
+      "aliases": ["食品工程"],
+      "queryTerms": ["食品科学与工程"]
+    },
+    {
+      "id": "biomedical-engineering",
+      "parentId": "engineering",
+      "label": "生物医学工程类",
+      "level": "category",
+      "aliases": ["生医工", "医疗器械工程"],
+      "queryTerms": ["生物医学工程类", "生物医学工程"],
+      "roleKeywords": ["医疗器械", "生物医学", "医学影像", "研发"],
+      "relatedSectors": ["医药健康", "科技数字"]
+    },
+    {
+      "id": "medicine-agriculture",
+      "parentId": "any-major",
+      "label": "医农类",
+      "level": "broad",
+      "aliases": ["医学农学", "医药农学"],
+      "queryTerms": ["医学类", "农学类"],
+      "relatedSectors": ["医药健康", "农业粮食"]
+    },
+    {
+      "id": "medicine",
+      "parentId": "medicine-agriculture",
+      "label": "医学",
+      "level": "discipline",
+      "aliases": ["医学门类"],
+      "queryTerms": ["医学类"],
+      "relatedSectors": ["医药健康"]
+    },
+    {
+      "id": "clinical-medicine",
+      "parentId": "medicine",
+      "label": "临床医学类",
+      "level": "category",
+      "aliases": ["临床医学"],
+      "queryTerms": ["临床医学类", "临床医学"],
+      "roleKeywords": ["临床", "医学事务", "医疗管理"],
+      "relatedSectors": ["医药健康"]
+    },
+    {
+      "id": "public-health",
+      "parentId": "medicine",
+      "label": "公共卫生与预防医学类",
+      "level": "category",
+      "aliases": ["公共卫生", "预防医学"],
+      "queryTerms": ["公共卫生与预防医学类", "预防医学"],
+      "roleKeywords": ["公共卫生", "健康管理", "职业卫生", "疾病预防"],
+      "relatedSectors": ["医药健康"]
+    },
+    {
+      "id": "medical-technology",
+      "parentId": "medicine",
+      "label": "医学技术类",
+      "level": "category",
+      "aliases": ["医学检验", "医学影像技术"],
+      "queryTerms": ["医学技术类", "医学检验技术", "医学影像技术"],
+      "roleKeywords": ["医学检验", "医学影像", "医疗技术"],
+      "relatedSectors": ["医药健康"]
+    },
+    {
+      "id": "nursing",
+      "parentId": "medicine",
+      "label": "护理学类",
+      "level": "category",
+      "aliases": ["护理学", "护理"],
+      "queryTerms": ["护理学类", "护理学"],
+      "roleKeywords": ["护理", "健康管理", "医疗服务"],
+      "relatedSectors": ["医药健康"]
+    },
+    {
+      "id": "pharmacy",
+      "parentId": "medicine",
+      "label": "药学类",
+      "level": "category",
+      "aliases": ["药学", "药物制剂"],
+      "queryTerms": ["药学类", "药学", "药物制剂"],
+      "roleKeywords": ["药物研发", "质量管理", "注册", "生产工艺"],
+      "relatedSectors": ["医药健康"]
+    },
+    {
+      "id": "agriculture-discipline",
+      "parentId": "medicine-agriculture",
+      "label": "农学",
+      "level": "discipline",
+      "aliases": ["农学门类"],
+      "queryTerms": ["农学类"],
+      "relatedSectors": ["农业粮食"]
+    },
+    {
+      "id": "plant-production",
+      "parentId": "agriculture-discipline",
+      "label": "植物生产类",
+      "level": "category",
+      "aliases": ["农艺类", "作物类"],
+      "queryTerms": ["植物生产类", "农学", "种子科学与工程"],
+      "roleKeywords": ["农业技术", "作物育种", "种业", "农艺"],
+      "relatedSectors": ["农业粮食"]
+    },
+    {
+      "id": "forestry",
+      "parentId": "agriculture-discipline",
+      "label": "林学类",
+      "level": "category",
+      "aliases": ["林业类", "林学"],
+      "queryTerms": ["林学类", "林学", "园林"],
+      "roleKeywords": ["林业技术", "生态修复", "园林", "森林资源"],
+      "relatedSectors": ["农业粮食", "地方城投"]
+    },
+    {
+      "id": "animal-production-medicine",
+      "parentId": "agriculture-discipline",
+      "label": "动物生产与医学类",
+      "level": "category",
+      "aliases": ["动物科学", "动物医学", "畜牧兽医"],
+      "queryTerms": ["动物科学", "动物医学", "畜牧兽医"],
+      "roleKeywords": ["养殖技术", "动物防疫", "兽医", "育种"],
+      "relatedSectors": ["农业粮食"]
+    },
+    {
+      "id": "agricultural-resource-environment",
+      "parentId": "agriculture-discipline",
+      "label": "农业资源与环境类",
+      "level": "category",
+      "aliases": ["农业资源与环境", "植物保护", "资源环境类"],
+      "queryTerms": ["农业资源与环境类", "农业资源与环境", "植物保护"],
+      "roleKeywords": ["农业技术", "土壤检测", "植物保护", "质量管理"],
+      "relatedSectors": ["农业粮食"]
+    }
+  ],
+  "relatedEdges": [
+    {
+      "from": "chinese-language",
+      "to": "journalism-communication",
+      "weight": 0.78,
+      "relation": "skill-transfer",
+      "reason": "文字表达、宣传与内容岗位存在明显能力迁移"
+    },
+    {
+      "from": "journalism-communication",
+      "to": "chinese-language",
+      "weight": 0.72,
+      "relation": "search-overlap",
+      "reason": "部分综合文字与宣传岗位同时接受中文类专业"
+    },
+    {
+      "from": "journalism-communication",
+      "to": "marketing",
+      "weight": 0.62,
+      "relation": "skill-transfer",
+      "reason": "品牌传播和市场内容岗位存在职责交叉"
+    },
+    {
+      "from": "economics",
+      "to": "finance",
+      "weight": 0.76,
+      "relation": "search-overlap",
+      "reason": "经济与金融岗位常存在专业交叉"
+    },
+    {
+      "from": "finance",
+      "to": "mathematics-statistics",
+      "weight": 0.66,
+      "relation": "skill-transfer",
+      "reason": "量化、风控和精算岗位需要数学统计能力"
+    },
+    {
+      "from": "computer",
+      "to": "electronic-information",
+      "weight": 0.7,
+      "relation": "search-overlap",
+      "reason": "软硬件、通信和嵌入式岗位存在交叉"
+    },
+    {
+      "from": "electronic-information",
+      "to": "computer",
+      "weight": 0.66,
+      "relation": "skill-transfer",
+      "reason": "数字化与软件岗位可能接受电子信息背景"
+    },
+    {
+      "from": "automation-electrical",
+      "to": "energy-power",
+      "weight": 0.72,
+      "relation": "search-overlap",
+      "reason": "电力生产与设备岗位常同时接受电气、自动化和能源动力"
+    },
+    {
+      "from": "mechanical",
+      "to": "automation-electrical",
+      "weight": 0.62,
+      "relation": "skill-transfer",
+      "reason": "设备、制造和机电岗位存在交叉"
+    },
+    {
+      "from": "materials",
+      "to": "chemistry-chemical",
+      "weight": 0.64,
+      "relation": "search-overlap",
+      "reason": "材料研发、检测和工艺岗位存在交叉"
+    },
+    {
+      "from": "civil-architecture",
+      "to": "engineering-management",
+      "weight": 0.78,
+      "relation": "search-overlap",
+      "reason": "工程建设岗位常同时接受技术和工程管理背景"
+    },
+    {
+      "from": "environment-safety",
+      "to": "chemistry-chemical",
+      "weight": 0.58,
+      "relation": "search-overlap",
+      "reason": "HSE 与化工生产岗位存在知识交叉"
+    }
+  ]
+}

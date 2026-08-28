@@ -1,0 +1,169 @@
+{
+  "schema": "guoyang-search-strategy/v1",
+  "objective": "诊断首轮零结果是否由省级地点和硕士条件过窄造成，并补查成都校招池中的新闻传播相邻岗位。",
+  "approach": "第二轮主动省略学历条件，把成都作为主要城市，并用两条宽查询观察当前校招样本；同时检索内容运营、编辑、文案、舆情、综合管理和专业不限，兼顾中国移动与招商银行两个已接通官方源。",
+  "hypotheses": [
+    "部分岗位只标注本科及以上或未结构化标注学历，省略学历过滤后可能出现硕士可申请岗位",
+    "招聘地点更常写成都而不是四川，改用城市条件可能解除地点匹配遗漏",
+    "新闻传播毕业生的国央企岗位可能落在内容、编辑、文案、舆情或综合管理职能",
+    "专业不限岗位可以作为新闻传播硕士的补充投递池，但仍需逐项核验职责与资格"
+  ],
+  "stopCondition": "完成四川/成都宽查询、核心相邻职能和两个官方企业方向后停止；若仍为零结果，则依据来源不完整性输出观察结论而不宣称全网无岗位。",
+  "iteration": 2,
+  "queries": [
+    {
+      "id": "r2-broad-campus-chengdu",
+      "stage": "diagnostic-broad",
+      "purpose": "观察成都当前校招样本并判断学历或专业过滤是否导致首轮零结果。",
+      "hypothesis": "省略学历和专业后能返回成都校招岗位。",
+      "limit": 50,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-broad-campus-sichuan",
+      "stage": "diagnostic-broad",
+      "purpose": "观察四川省级地点条件下的当前校招样本，与成都城市条件对照。",
+      "hypothesis": "若成都有结果而四川无结果，说明来源地点文本更偏城市级。",
+      "limit": 50,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "四川",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-major-news-communication-chengdu",
+      "stage": "city-major",
+      "purpose": "省略学历条件后验证成都新闻传播专业直接命中。",
+      "hypothesis": "学历字段可能缺失或写作本科及以上，导致首轮硕士过滤过严。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "major": "新闻传播",
+        "location": "成都",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-role-content-operations-chengdu",
+      "stage": "adjacent-role",
+      "purpose": "补查内容策划与运营方向岗位。",
+      "hypothesis": "新闻传播能力在岗位中可能体现为内容运营。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "内容运营",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-role-editor-chengdu",
+      "stage": "adjacent-role",
+      "purpose": "补查采编、编辑和内容生产岗位。",
+      "hypothesis": "部分对口岗位以编辑命名。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "编辑",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-role-copywriting-chengdu",
+      "stage": "adjacent-role",
+      "purpose": "补查文案策划及传播素材岗位。",
+      "hypothesis": "部分品牌传播职责以文案命名。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "文案",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-role-public-opinion-chengdu",
+      "stage": "adjacent-role",
+      "purpose": "补查舆情监测和公共传播岗位。",
+      "hypothesis": "新闻传播训练可迁移到舆情相关职能。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "舆情",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-role-general-management-sichuan",
+      "stage": "adjacent-role",
+      "purpose": "补查可能容纳新闻传播专业的综合管理与党群职能。",
+      "hypothesis": "部分国央企将宣传、材料写作和企业文化职责并入综合管理岗。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "四川",
+        "keyword": "综合管理",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-unrestricted-major-sichuan",
+      "stage": "unrestricted-major",
+      "purpose": "建立四川专业不限校招补充池。",
+      "hypothesis": "专业不限岗位可为新闻传播硕士提供跨职能机会。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "四川",
+        "keyword": "专业不限",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-unrestricted-major-chengdu",
+      "stage": "unrestricted-major",
+      "purpose": "以成都城市条件复核专业不限校招岗位。",
+      "hypothesis": "城市级地点比省级地点更容易命中专业不限岗位。",
+      "limit": 30,
+      "scanLimit": 5000,
+      "filters": {
+        "location": "成都",
+        "keyword": "不限专业",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-china-mobile-sichuan-campus",
+      "stage": "official-enterprise",
+      "purpose": "直接检查中国移动体系在四川的校招岗位，避免职责词遗漏。",
+      "hypothesis": "中国移动官方源可能存在适合文科背景的综合或市场职能岗位。",
+      "limit": 50,
+      "scanLimit": 5000,
+      "filters": {
+        "enterprise": "中国移动",
+        "location": "四川",
+        "recruitType": "校招"
+      }
+    },
+    {
+      "id": "r2-cmb-chengdu-campus",
+      "stage": "official-enterprise",
+      "purpose": "直接检查招商银行体系在成都的校招岗位，补充不限专业或综合类机会。",
+      "hypothesis": "银行官方源可能有未按新闻传播关键词标注的综合培养或职能岗位。",
+      "limit": 50,
+      "scanLimit": 5000,
+      "filters": {
+        "enterprise": "招商银行",
+        "location": "成都",
+        "recruitType": "校招"
+      }
+    }
+  ]
+}

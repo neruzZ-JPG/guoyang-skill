@@ -1,0 +1,116 @@
+{
+  "query": {
+    "id": "r1-major-communication-sichuan",
+    "stage": "major-alias",
+    "rationale": "覆盖招聘公告将专业写成传播学的情况。",
+    "hypothesis": "传播学专业名会补充直接专业查询遗漏。",
+    "filters": {
+      "education": "硕士",
+      "major": "传播学",
+      "location": "四川",
+      "recruitType": "campus"
+    },
+    "limit": 30,
+    "scanLimit": 1500,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--education",
+      "硕士",
+      "--major",
+      "传播学",
+      "--location",
+      "四川",
+      "--type",
+      "campus",
+      "--limit",
+      "30",
+      "--scan-limit",
+      "1500"
+    ]
+  },
+  "execution": {
+    "command": "npx",
+    "args": [
+      "--yes",
+      "@neruzz-jpg/guoyang-pro@latest",
+      "search",
+      "--format",
+      "json",
+      "--education",
+      "硕士",
+      "--major",
+      "传播学",
+      "--location",
+      "四川",
+      "--type",
+      "campus",
+      "--limit",
+      "30",
+      "--scan-limit",
+      "1500"
+    ],
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T07:13:21.284Z",
+    "finishedAt": "2026-08-28T07:13:26.106Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": true,
+    "total": 0,
+    "data": {
+      "mode": "live",
+      "fetched_at": "2026-08-28T07:13:21.965Z",
+      "degraded": true,
+      "complete": false,
+      "scanned": 1710,
+      "sources": [
+        {
+          "id": "china-mobile",
+          "ok": true,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:13:21.966Z",
+          "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+        },
+        {
+          "id": "cmb",
+          "ok": true,
+          "count": 0,
+          "scanned": 10,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:13:21.977Z",
+          "note": "已扫描招商银行官方招聘各目标分区"
+        },
+        {
+          "id": "iguopin",
+          "ok": true,
+          "count": 0,
+          "scanned": 1500,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:13:21.978Z",
+          "note": "扫描达到上限 1500，结果可能不完整"
+        },
+        {
+          "id": "ncss",
+          "ok": false,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:13:21.978Z",
+          "error": "unexpected response flag: false"
+        }
+      ],
+      "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+    },
+    "positions": []
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "query": {
+    "id": "r1-role-pr-sichuan",
+    "stage": "role-hypothesis",
+    "rationale": "寻找公共关系、舆情及对外传播相关岗位。",
+    "hypothesis": "企业传播职责可能归入公关岗位。",
+    "filters": {
+      "education": "硕士",
+      "location": "四川",
+      "keyword": "公关",
+      "recruitType": "campus"
+    },
+    "limit": 30,
+    "scanLimit": 1500,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--education",
+      "硕士",
+      "--location",
+      "四川",
+      "--type",
+      "campus",
+      "--keyword",
+      "公关",
+      "--limit",
+      "30",
+      "--scan-limit",
+      "1500"
+    ]
+  },
+  "execution": {
+    "command": "npx",
+    "args": [
+      "--yes",
+      "@neruzz-jpg/guoyang-pro@latest",
+      "search",
+      "--format",
+      "json",
+      "--education",
+      "硕士",
+      "--location",
+      "四川",
+      "--type",
+      "campus",
+      "--keyword",
+      "公关",
+      "--limit",
+      "30",
+      "--scan-limit",
+      "1500"
+    ],
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T07:13:45.303Z",
+    "finishedAt": "2026-08-28T07:13:49.965Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": true,
+    "total": 0,
+    "data": {
+      "mode": "live",
+      "fetched_at": "2026-08-28T07:13:45.999Z",
+      "degraded": true,
+      "complete": false,
+      "scanned": 1700,
+      "sources": [
+        {
+          "id": "china-mobile",
+          "ok": true,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:13:46.000Z",
+          "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+        },
+        {
+          "id": "cmb",
+          "ok": true,
+          "count": 0,
+          "scanned": 0,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:13:46.011Z",
+          "note": "已扫描招商银行官方招聘各目标分区"
+        },
+        {
+          "id": "iguopin",
+          "ok": true,
+          "count": 0,
+          "scanned": 1500,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:13:46.012Z",
+          "note": "扫描达到上限 1500，结果可能不完整"
+        },
+        {
+          "id": "ncss",
+          "ok": false,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:13:46.012Z",
+          "error": "unexpected response flag: false"
+        }
+      ],
+      "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+    },
+    "positions": []
+  }
+}

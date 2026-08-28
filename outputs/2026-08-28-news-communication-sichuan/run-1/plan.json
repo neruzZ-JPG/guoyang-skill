@@ -1,0 +1,385 @@
+{
+  "schema": "guoyang-ai-query-plan/v1",
+  "createdAt": "2026-08-28T07:13:06.227Z",
+  "planningMode": "ai-directed",
+  "expansionVersion": "1.0.0",
+  "profile": {
+    "education": "硕士",
+    "major": "新闻传播",
+    "schoolTier": "985",
+    "locations": [
+      "四川"
+    ],
+    "sectors": [],
+    "recruitTypes": [
+      "校招"
+    ],
+    "keywords": [],
+    "excludeKeywords": [],
+    "acceptUnrestrictedMajor": true,
+    "acceptRelocation": false,
+    "maxQueries": 24,
+    "minimumResults": 15,
+    "resultLimitPerQuery": 30,
+    "scanLimit": 1500
+  },
+  "resolved": {
+    "sectors": [],
+    "recruitTypes": [
+      "campus"
+    ],
+    "originalLocations": [
+      "四川"
+    ],
+    "expandedLocations": [
+      "成都",
+      "绵阳",
+      "德阳",
+      "宜宾",
+      "泸州",
+      "南充",
+      "乐山",
+      "眉山",
+      "自贡",
+      "攀枝花",
+      "广元",
+      "遂宁",
+      "内江",
+      "广安",
+      "达州",
+      "雅安",
+      "巴中",
+      "资阳",
+      "阿坝",
+      "甘孜",
+      "凉山"
+    ],
+    "expandedLocationMap": {
+      "四川": [
+        "成都",
+        "绵阳",
+        "德阳",
+        "宜宾",
+        "泸州",
+        "南充",
+        "乐山",
+        "眉山",
+        "自贡",
+        "攀枝花",
+        "广元",
+        "遂宁",
+        "内江",
+        "广安",
+        "达州",
+        "雅安",
+        "巴中",
+        "资阳",
+        "阿坝",
+        "甘孜",
+        "凉山"
+      ]
+    },
+    "majorFamily": "journalism-communication",
+    "majorAliases": [
+      "新闻传播",
+      "新闻传播学类",
+      "新闻学",
+      "传播学",
+      "广告学",
+      "网络与新媒体",
+      "编辑出版学",
+      "国际新闻与传播",
+      "中国语言文学类"
+    ],
+    "roleKeywords": [
+      "宣传",
+      "品牌",
+      "内容运营",
+      "编辑",
+      "记者",
+      "新媒体",
+      "文案",
+      "融媒体",
+      "舆情",
+      "公关"
+    ],
+    "relatedSectors": [
+      "传媒文化",
+      "科技数字"
+    ]
+  },
+  "policy": {
+    "minimumRequiredStages": [],
+    "minimumResults": 15,
+    "maxQueries": 24,
+    "stopAtStageBoundary": false
+  },
+  "warnings": [
+    "未提供意向行业；查询不会限定行业",
+    "候选查询 44 条，已按 maxQueries=24 截断"
+  ],
+  "totalCandidateQueries": 44,
+  "truncated": true,
+  "queries": [
+    {
+      "id": "r1-major-news-communication-sichuan",
+      "stage": "direct-major",
+      "rationale": "验证四川校招中直接接受新闻传播专业且学历匹配的岗位。",
+      "hypothesis": "专业字段存在直接命中。",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    },
+    {
+      "id": "r1-major-journalism-sichuan",
+      "stage": "major-alias",
+      "rationale": "覆盖招聘公告将专业写成新闻学的情况。",
+      "hypothesis": "新闻学专业名会补充直接专业查询遗漏。",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻学",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    },
+    {
+      "id": "r1-major-communication-sichuan",
+      "stage": "major-alias",
+      "rationale": "覆盖招聘公告将专业写成传播学的情况。",
+      "hypothesis": "传播学专业名会补充直接专业查询遗漏。",
+      "filters": {
+        "education": "硕士",
+        "major": "传播学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "传播学",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    },
+    {
+      "id": "r1-role-publicity-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找宣传、党宣及企业文化传播相关岗位。",
+      "hypothesis": "国央企新闻传播岗位常以宣传命名。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "宣传",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "宣传",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    },
+    {
+      "id": "r1-role-brand-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找品牌传播、品牌管理及市场传播岗位。",
+      "hypothesis": "部分对口岗位以品牌而非新闻传播命名。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "品牌",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "品牌",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    },
+    {
+      "id": "r1-role-new-media-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找新媒体策划、运营与内容生产岗位。",
+      "hypothesis": "数字传播岗位会以新媒体命名。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "新媒体",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "新媒体",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    },
+    {
+      "id": "r1-role-converged-media-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找融媒体、全媒体及内容采编相关岗位。",
+      "hypothesis": "媒体机构和大型企业可能使用融媒体岗位名称。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "融媒体",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "融媒体",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    },
+    {
+      "id": "r1-role-pr-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找公共关系、舆情及对外传播相关岗位。",
+      "hypothesis": "企业传播职责可能归入公关岗位。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "公关",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--keyword",
+        "公关",
+        "--limit",
+        "30",
+        "--scan-limit",
+        "1500"
+      ]
+    }
+  ],
+  "strategy": {
+    "schema": "guoyang-search-strategy/v1",
+    "objective": "在四川范围内寻找面向硕士应届生的新闻传播对口及相邻职能校招岗位，并识别真实岗位命名。",
+    "approach": "首轮不限制行业，用专业原文、专业别名和差异明显的职责词分别检索；先验证专业字段直接命中，再比较宣传、品牌、新媒体、融媒体、公关等岗位词的增量。",
+    "hypotheses": [
+      "直接标注新闻传播专业的四川校招岗位较少，新闻学或传播学等专业别名可能补充命中",
+      "对口岗位更可能以宣传、品牌、新媒体、融媒体或公关命名，而非在标题中出现新闻传播",
+      "行业不限有利于发现制造、能源、基建及科技类国央企中的职能传播岗位"
+    ],
+    "stopCondition": "完成专业字段与五类职责词的探索；若去重岗位不足或岗位命名仍不清晰，再根据首轮企业与职责证据补充一轮。",
+    "iteration": 1
+  }
+}

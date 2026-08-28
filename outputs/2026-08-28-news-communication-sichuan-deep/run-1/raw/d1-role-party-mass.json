@@ -1,0 +1,105 @@
+{
+  "query": {
+    "id": "d1-role-party-mass",
+    "stage": "adjacent-role",
+    "rationale": "检索党群工作岗位。",
+    "filters": {
+      "location": "成都",
+      "keyword": "党群"
+    },
+    "limit": 100,
+    "scanLimit": 5000,
+    "args": [
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "成都",
+      "--keyword",
+      "党群",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ]
+  },
+  "execution": {
+    "command": "npx",
+    "args": [
+      "--yes",
+      "@neruzz-jpg/guoyang-pro@latest",
+      "search",
+      "--format",
+      "json",
+      "--location",
+      "成都",
+      "--keyword",
+      "党群",
+      "--limit",
+      "100",
+      "--scan-limit",
+      "5000"
+    ],
+    "exitCode": 0,
+    "signal": null,
+    "timedOut": false,
+    "startedAt": "2026-08-28T07:38:35.922Z",
+    "finishedAt": "2026-08-28T07:38:49.561Z",
+    "stderr": ""
+  },
+  "payload": {
+    "ok": true,
+    "total": 0,
+    "data": {
+      "mode": "live",
+      "fetched_at": "2026-08-28T07:38:36.635Z",
+      "degraded": true,
+      "complete": false,
+      "scanned": 5200,
+      "sources": [
+        {
+          "id": "china-mobile",
+          "ok": true,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:38:36.636Z",
+          "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+        },
+        {
+          "id": "cmb",
+          "ok": true,
+          "count": 0,
+          "scanned": 0,
+          "exhausted": true,
+          "truncated": false,
+          "fetched_at": "2026-08-28T07:38:36.647Z",
+          "note": "已扫描招商银行官方招聘各目标分区"
+        },
+        {
+          "id": "iguopin",
+          "ok": true,
+          "count": 0,
+          "scanned": 5000,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:38:36.648Z",
+          "note": "扫描达到上限 5000，结果可能不完整"
+        },
+        {
+          "id": "ncss",
+          "ok": false,
+          "count": 0,
+          "scanned": 100,
+          "exhausted": false,
+          "truncated": true,
+          "fetched_at": "2026-08-28T07:38:36.649Z",
+          "error": "unexpected response flag: false"
+        }
+      ],
+      "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+    },
+    "positions": []
+  }
+}

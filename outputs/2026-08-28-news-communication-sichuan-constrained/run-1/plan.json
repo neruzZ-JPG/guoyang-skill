@@ -1,0 +1,1181 @@
+{
+  "schema": "guoyang-ai-query-plan/v1",
+  "createdAt": "2026-08-28T08:54:25.998Z",
+  "planningMode": "ai-directed",
+  "expansionVersion": "2.0.0",
+  "profile": {
+    "education": "硕士",
+    "major": "新闻传播",
+    "schoolTier": "985",
+    "locations": [
+      "四川"
+    ],
+    "sectors": [],
+    "recruitTypes": [
+      "校招"
+    ],
+    "keywords": [],
+    "excludeKeywords": [
+      "劳务派遣",
+      "长期出差",
+      "常驻项目",
+      "驻外",
+      "偏远"
+    ],
+    "acceptUnrestrictedMajor": true,
+    "acceptRelocation": false,
+    "maxQueries": 32,
+    "minimumResults": 15,
+    "resultLimitPerQuery": 50,
+    "scanLimit": 3000,
+    "majorBeamWidth": 8,
+    "majorBeamDepth": 5,
+    "majorMaxCandidates": 24
+  },
+  "resolved": {
+    "sectors": [],
+    "recruitTypes": [
+      "campus"
+    ],
+    "originalLocations": [
+      "四川"
+    ],
+    "expandedLocations": [
+      "成都",
+      "绵阳",
+      "德阳",
+      "宜宾",
+      "泸州",
+      "南充",
+      "乐山",
+      "眉山",
+      "自贡",
+      "攀枝花",
+      "广元",
+      "遂宁",
+      "内江",
+      "广安",
+      "达州",
+      "雅安",
+      "巴中",
+      "资阳",
+      "阿坝",
+      "甘孜",
+      "凉山"
+    ],
+    "expandedLocationMap": {
+      "四川": [
+        "成都",
+        "绵阳",
+        "德阳",
+        "宜宾",
+        "泸州",
+        "南充",
+        "乐山",
+        "眉山",
+        "自贡",
+        "攀枝花",
+        "广元",
+        "遂宁",
+        "内江",
+        "广安",
+        "达州",
+        "雅安",
+        "巴中",
+        "资阳",
+        "阿坝",
+        "甘孜",
+        "凉山"
+      ]
+    },
+    "majorFamily": "journalism-communication",
+    "majorSeedNodeIds": [
+      "journalism-communication"
+    ],
+    "majorTreeVersion": "2.0.0",
+    "majorBeam": {
+      "schema": "guoyang-major-beam/v1",
+      "treeVersion": "2.0.0",
+      "input": "新闻传播",
+      "config": {
+        "beamWidth": 8,
+        "maxDepth": 5,
+        "maxCandidates": 24,
+        "minimumSeedScore": 0.58,
+        "semanticWeight": 0.8
+      },
+      "matched": true,
+      "semanticRecallUsed": false,
+      "seedNodeIds": [
+        "journalism-communication"
+      ],
+      "exactSeedNodeIds": [
+        "journalism-communication"
+      ],
+      "candidates": [
+        {
+          "nodeId": "journalism-communication",
+          "label": "新闻传播学类",
+          "level": "category",
+          "kind": "matched",
+          "score": 1,
+          "distance": 0,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "新闻传播学类",
+            "新闻传播"
+          ],
+          "roleKeywords": [
+            "宣传",
+            "品牌",
+            "内容运营",
+            "编辑",
+            "记者",
+            "新媒体",
+            "文案",
+            "融媒体",
+            "舆情",
+            "公关"
+          ],
+          "relatedSectors": [
+            "传媒文化",
+            "科技数字"
+          ],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            }
+          ],
+          "transitions": []
+        },
+        {
+          "nodeId": "literature",
+          "label": "文学",
+          "level": "discipline",
+          "kind": "ancestor",
+          "score": 0.86,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "文学",
+            "文学类"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "parent",
+              "reason": "向上放宽专业口径"
+            }
+          ]
+        },
+        {
+          "nodeId": "advertising",
+          "label": "广告学",
+          "level": "major",
+          "kind": "descendant",
+          "score": 0.78,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "广告学",
+            "广告"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "advertising",
+              "label": "广告学"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "advertising",
+              "label": "广告学"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "child",
+              "reason": "探索同一上位专业下的具体分支"
+            }
+          ]
+        },
+        {
+          "nodeId": "communication",
+          "label": "传播学",
+          "level": "major",
+          "kind": "descendant",
+          "score": 0.78,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "传播学",
+            "传播"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "communication",
+              "label": "传播学"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "communication",
+              "label": "传播学"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "child",
+              "reason": "探索同一上位专业下的具体分支"
+            }
+          ]
+        },
+        {
+          "nodeId": "editing-publishing",
+          "label": "编辑出版学",
+          "level": "major",
+          "kind": "descendant",
+          "score": 0.78,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "编辑出版学",
+            "编辑出版"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "editing-publishing",
+              "label": "编辑出版学"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "editing-publishing",
+              "label": "编辑出版学"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "child",
+              "reason": "探索同一上位专业下的具体分支"
+            }
+          ]
+        },
+        {
+          "nodeId": "international-journalism",
+          "label": "国际新闻与传播",
+          "level": "major",
+          "kind": "descendant",
+          "score": 0.78,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "国际新闻与传播",
+            "国际新闻"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "international-journalism",
+              "label": "国际新闻与传播"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "international-journalism",
+              "label": "国际新闻与传播"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "child",
+              "reason": "探索同一上位专业下的具体分支"
+            }
+          ]
+        },
+        {
+          "nodeId": "journalism",
+          "label": "新闻学",
+          "level": "major",
+          "kind": "descendant",
+          "score": 0.78,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "新闻学",
+            "新闻"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "journalism",
+              "label": "新闻学"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "journalism",
+              "label": "新闻学"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "child",
+              "reason": "探索同一上位专业下的具体分支"
+            }
+          ]
+        },
+        {
+          "nodeId": "network-new-media",
+          "label": "网络与新媒体",
+          "level": "major",
+          "kind": "descendant",
+          "score": 0.78,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "网络与新媒体",
+            "新媒体"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "network-new-media",
+              "label": "网络与新媒体"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "network-new-media",
+              "label": "网络与新媒体"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "child",
+              "reason": "探索同一上位专业下的具体分支"
+            }
+          ]
+        },
+        {
+          "nodeId": "humanities-social-sciences",
+          "label": "文科/人文社科",
+          "level": "broad",
+          "kind": "ancestor",
+          "score": 0.7396,
+          "distance": 2,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "文科/人文社科",
+            "文科类",
+            "人文社科类"
+          ],
+          "roleKeywords": [
+            "综合管理",
+            "行政",
+            "文秘",
+            "宣传"
+          ],
+          "relatedSectors": [
+            "传媒文化"
+          ],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "parent",
+              "reason": "向上放宽专业口径"
+            },
+            {
+              "type": "parent",
+              "reason": "向上放宽专业口径"
+            }
+          ]
+        },
+        {
+          "nodeId": "chinese-language",
+          "label": "中国语言文学类",
+          "level": "category",
+          "kind": "related",
+          "score": 0.72,
+          "distance": 1,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "中国语言文学类",
+            "中文类"
+          ],
+          "roleKeywords": [
+            "文秘",
+            "材料撰写",
+            "行政",
+            "党建",
+            "宣传",
+            "编辑"
+          ],
+          "relatedSectors": [
+            "传媒文化"
+          ],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "chinese-language",
+              "label": "中国语言文学类"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "chinese-language",
+              "label": "中国语言文学类"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "related",
+              "relation": "search-overlap",
+              "reason": "部分综合文字与宣传岗位同时接受中文类专业"
+            }
+          ]
+        },
+        {
+          "nodeId": "any-major",
+          "label": "专业不限",
+          "level": "root",
+          "kind": "unrestricted",
+          "score": 0.5325,
+          "distance": 3,
+          "matchedTerm": "新闻传播",
+          "exactMatch": true,
+          "seedSource": "exact",
+          "lexicalScore": 1,
+          "semanticScore": 0,
+          "queryTerms": [
+            "专业不限",
+            "不限专业"
+          ],
+          "roleKeywords": [],
+          "relatedSectors": [],
+          "path": [
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            }
+          ],
+          "scanPath": [
+            {
+              "nodeId": "journalism-communication",
+              "label": "新闻传播学类"
+            },
+            {
+              "nodeId": "literature",
+              "label": "文学"
+            },
+            {
+              "nodeId": "humanities-social-sciences",
+              "label": "文科/人文社科"
+            },
+            {
+              "nodeId": "any-major",
+              "label": "专业不限"
+            }
+          ],
+          "transitions": [
+            {
+              "type": "parent",
+              "reason": "向上放宽专业口径"
+            },
+            {
+              "type": "parent",
+              "reason": "向上放宽专业口径"
+            },
+            {
+              "type": "parent",
+              "reason": "向上放宽专业口径"
+            }
+          ]
+        }
+      ]
+    },
+    "majorAliases": [
+      "新闻传播",
+      "新闻传播学类",
+      "文学",
+      "文学类",
+      "广告学",
+      "广告",
+      "传播学",
+      "传播",
+      "编辑出版学",
+      "编辑出版",
+      "国际新闻与传播",
+      "国际新闻",
+      "新闻学",
+      "新闻",
+      "网络与新媒体",
+      "新媒体",
+      "文科/人文社科",
+      "文科类",
+      "人文社科类",
+      "中国语言文学类",
+      "中文类"
+    ],
+    "roleKeywords": [
+      "宣传",
+      "品牌",
+      "内容运营",
+      "编辑",
+      "记者",
+      "新媒体",
+      "文案",
+      "融媒体",
+      "舆情",
+      "公关",
+      "综合管理",
+      "行政",
+      "文秘",
+      "材料撰写",
+      "党建"
+    ],
+    "relatedSectors": [
+      "传媒文化",
+      "科技数字"
+    ]
+  },
+  "policy": {
+    "minimumRequiredStages": [],
+    "minimumResults": 15,
+    "maxQueries": 32,
+    "stopAtStageBoundary": false
+  },
+  "warnings": [
+    "未提供意向行业；查询不会限定行业",
+    "候选查询 61 条，已按 maxQueries=32 截断"
+  ],
+  "totalCandidateQueries": 61,
+  "truncated": true,
+  "queries": [
+    {
+      "id": "c1-broad-campus-chengdu",
+      "stage": "broad-diagnostic",
+      "rationale": "建立成都当前国央企校招宽池，识别真实岗位命名和结构化字段。",
+      "hypothesis": "省略专业和学历后可以观察当前成都校招的完整候选结构。",
+      "filters": {
+        "location": "成都",
+        "recruitType": "campus"
+      },
+      "limit": 100,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-broad-campus-sichuan",
+      "stage": "broad-diagnostic",
+      "rationale": "用四川省级地点建立对照池，检验省级地点是否能覆盖城市记录。",
+      "hypothesis": "若成都命中而四川省级命中少，后续应按城市补查。",
+      "filters": {
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 100,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "100",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-major-news-communication-sichuan",
+      "stage": "major-taxonomy",
+      "rationale": "验证硕士、新闻传播、四川和校招四项直接条件的命中情况。",
+      "hypothesis": "存在直接接受新闻传播硕士的校招岗位。",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--education",
+        "硕士",
+        "--major",
+        "新闻传播",
+        "--location",
+        "四川",
+        "--type",
+        "campus",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-major-news-and-communication-chengdu",
+      "stage": "major-taxonomy",
+      "rationale": "用专业目录常见表述“新闻与传播”复核成都岗位。",
+      "hypothesis": "“新闻与传播类”比用户原词“新闻传播”更容易匹配公告专业字段。",
+      "filters": {
+        "major": "新闻与传播",
+        "location": "成都",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--major",
+        "新闻与传播",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-major-journalism-category-chengdu",
+      "stage": "major-taxonomy",
+      "rationale": "覆盖招聘公告使用“新闻传播学类”的专业目录写法。",
+      "hypothesis": "专业大类写法会补充精确词遗漏。",
+      "filters": {
+        "major": "新闻传播学类",
+        "location": "成都",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--major",
+        "新闻传播学类",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-major-chinese-language-chengdu",
+      "stage": "explicit-related-major",
+      "rationale": "沿专业树的显式 search-overlap 边，验证同时接受中文类和新闻传播背景的综合文字岗位。",
+      "hypothesis": "部分综合文字与宣传岗位同时接受中文类、新闻传播类专业。",
+      "filters": {
+        "major": "中国语言文学类",
+        "location": "成都",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--major",
+        "中国语言文学类",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-role-publicity-chengdu",
+      "stage": "adjacent-role",
+      "rationale": "检索宣传及新闻宣传职能。",
+      "hypothesis": "国央企传播岗位最常以宣传命名。",
+      "filters": {
+        "location": "成都",
+        "keyword": "宣传",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--keyword",
+        "宣传",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-role-party-mass-chengdu",
+      "stage": "adjacent-role",
+      "rationale": "检索党群、党务及群团传播职能。",
+      "hypothesis": "新闻传播能力可能用于党群材料、活动和宣传工作。",
+      "filters": {
+        "location": "成都",
+        "keyword": "党群",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--keyword",
+        "党群",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-role-corporate-culture-chengdu",
+      "stage": "adjacent-role",
+      "rationale": "检索企业文化建设与内部传播岗位。",
+      "hypothesis": "制造和科研央企可能以企业文化命名传播职能。",
+      "filters": {
+        "location": "成都",
+        "keyword": "企业文化",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--keyword",
+        "企业文化",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-role-general-management-chengdu",
+      "stage": "adjacent-role",
+      "rationale": "检索可能容纳材料写作、宣传和协调职责的综合管理岗位。",
+      "hypothesis": "部分新闻传播适配职责被合并到综合管理大类。",
+      "filters": {
+        "location": "成都",
+        "keyword": "综合管理",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--keyword",
+        "综合管理",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-role-brand-chengdu",
+      "stage": "adjacent-role",
+      "rationale": "检索品牌管理、品牌传播与市场传播岗位。",
+      "hypothesis": "传播职能可能以品牌命名而不是新闻。",
+      "filters": {
+        "location": "成都",
+        "keyword": "品牌",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--keyword",
+        "品牌",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-role-secretarial-chengdu",
+      "stage": "adjacent-role",
+      "rationale": "检索强调文字材料和组织协调的文秘岗位。",
+      "hypothesis": "新闻传播硕士的写作训练可迁移至部分文秘职能。",
+      "filters": {
+        "location": "成都",
+        "keyword": "文秘",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--keyword",
+        "文秘",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    },
+    {
+      "id": "c1-unrestricted-major-chengdu",
+      "stage": "unrestricted-major",
+      "rationale": "补查成都明确专业不限的校招岗位。",
+      "hypothesis": "专业不限岗位可提供管培、运营或综合职能机会。",
+      "filters": {
+        "location": "成都",
+        "keyword": "专业不限",
+        "recruitType": "campus"
+      },
+      "limit": 50,
+      "scanLimit": 5000,
+      "args": [
+        "search",
+        "--format",
+        "json",
+        "--location",
+        "成都",
+        "--type",
+        "campus",
+        "--keyword",
+        "专业不限",
+        "--limit",
+        "50",
+        "--scan-limit",
+        "5000"
+      ]
+    }
+  ],
+  "strategy": {
+    "schema": "guoyang-search-strategy/v1",
+    "objective": "在四川范围内寻找适合 985 新闻传播硕士应届生的校招岗位，先识别成都岗位池及真实专业、职能命名，并排除劳务派遣、长期驻外或明显偏远岗位。",
+    "approach": "首轮以成都为核心，设置四川省级查询作地点结构对照；用宽口径校招池、新闻传播专业目录写法、显式关联的中文类口径以及宣传、党群、企业文化、综合管理、品牌、文秘和专业不限等差异明显的方向进行探索。学历条件只用于直接专业查询，职责查询暂不加学历，避免遗漏“本科及以上”或学历未结构化的岗位，最终逐项核验硕士可报性。",
+    "hypotheses": [
+      "四川岗位的结构化地点更可能写作成都等城市而非四川省级名称",
+      "对口岗位可能在专业字段中写作新闻与传播类，而岗位标题写作职能管理、宣传、党群或企业文化",
+      "部分适合新闻传播背景的机会不限定专业，或同时接受中国语言文学类",
+      "不限定行业比只检索传媒文化更能覆盖制造、能源、通信和科研院所的传播职能"
+    ],
+    "stopCondition": "完成成都宽池、核心专业口径和七类职能假设；若有效校招岗位很少，再以其他四川主要城市及遗漏职责开展一轮补查。",
+    "iteration": 1
+  }
+}

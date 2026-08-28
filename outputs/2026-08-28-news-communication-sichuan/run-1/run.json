@@ -1,0 +1,1281 @@
+{
+  "schema": "guoyang-search-run/v1",
+  "startedAt": "2026-08-28T07:13:06.221Z",
+  "finishedAt": "2026-08-28T07:13:49.965Z",
+  "profile": {
+    "education": "硕士",
+    "major": "新闻传播",
+    "schoolTier": "985",
+    "locations": [
+      "四川"
+    ],
+    "sectors": [],
+    "recruitTypes": [
+      "校招"
+    ],
+    "keywords": [],
+    "excludeKeywords": [],
+    "acceptUnrestrictedMajor": true,
+    "acceptRelocation": false,
+    "maxQueries": 24,
+    "minimumResults": 15,
+    "resultLimitPerQuery": 30,
+    "scanLimit": 1500
+  },
+  "cli": {
+    "invocation": {
+      "kind": "npx-package",
+      "value": "@neruzz-jpg/guoyang-pro@latest"
+    },
+    "version": "0.2.0",
+    "helpChecked": true,
+    "helpExcerpt": "guoyang-pro v0.2.0\n用 Claude Code 规划你的国央企求职。\n\nUsage: guoyang-pro <verb> [flags]\n\n名录:\n  enterprises   央企/国企名录(按梯队/行业筛)\n                  --tier <T0|T1|T2|T3>  求职热度梯队\n                  --sector <行业>  能源电力/金融银行/烟草/电信运营 ...\n                  --regulator <监管>  sasac国资委/mof财政部/烟草/铁路/地方\n                  --keyword <text>  --limit <N>\n  enterprise    单个企业详情 + 其在招岗位\n                  <名称/简称/id>  或  --name <text>  [--cache-only]\n\n岗位 (实时;岗位像大厂一样每天变动,默认实时拉取各源):\n  search        搜索在招岗位\n                  --enterprise <企业>  --tier <梯队>  --sector <行业>\n                  --type <校招|社招|实习>  --education <学历>  --major <专业>\n                  --location <城市>  --employment <在编/正式|劳务派遣>\n                  --keyword <text>  --limit <N>  --scan-limit <N>\n                  --cache-only  仅查询24小时内实时缓存(不联网)\n                  --offline  仅用本地快照(不联网),--year <年> 指定快照年份\n  detail        岗位详情  --id <id>  [--year <离线快照年>]\n\n规划:\n  recommend     冲/稳/保(启发式估算:梯队+学历门槛 vs 院校层级+学历)\n                  --education <学历>  --school-tier <985|211|双一流|普通本科>\n                  --major  --location  --sector  --type\n  match         智能匹配(基于意向)  --sector --location --major --type\n                  --education  --keywords <k1,k2>\n  hot           当前扫描样本聚合  --by sector|tier  [--offline --year]\n  cold          当前样本内招录较多岗位  --top <N>  [--offline --year]\n  calendar      国央企招聘时间线/投递日历  [--sector <行业>] [--type 校招|社招]\n  stats         统计概览(披露 complete/partial_sample)  [--offline --year]\n\n记忆:\n  memory list   列出记忆\n  memory set    设置画像  --education 本科 --school-tier 211 --sector 金融银行\n  memory watch  关注  --kind enterprise|position --id <id> [--year] [--note]\n  memory clear  清除\n\nMeta:\n  help / version / selftest\n  sources       实时检查数据源健康与字段质量 [--static 仅看配置]\n  tiers         梯队说明\n  sectors       行业列表\n  regulators    监管主体列表\n",
+    "sourceConfig": {
+      "total": 6,
+      "configured_live": 4,
+      "adapters": [
+        {
+          "id": "china-mobile",
+          "name": "中国移动官方招聘",
+          "homepage": "https://job.10086.cn/",
+          "scopes": [
+            "campus",
+            "social",
+            "intern",
+            "unknown"
+          ],
+          "configured_live": true,
+          "kind": "official",
+          "priority": 100,
+          "coverage": "中国移动集团总部、省公司、专业公司、直属单位及其公开招聘岗位。",
+          "quality": "企业、岗位、招聘类型、地点、学历、职责、要求和截止时间来自中国移动官方招聘列表；缺失薪资单位时不猜测。"
+        },
+        {
+          "id": "cmb",
+          "name": "招商银行官方招聘",
+          "homepage": "https://career.cmbchina.com/",
+          "scopes": [
+            "campus",
+            "social",
+            "intern"
+          ],
+          "configured_live": true,
+          "kind": "official",
+          "priority": 100,
+          "coverage": "招商银行总行、分行、信用卡中心及招银网络科技等公开校招、社招和实习岗位。",
+          "quality": "招聘主体、岗位、类型、地点和截止时间来自招商银行官方列表；列表未提供的学历、专业、人数不猜测。"
+        },
+        {
+          "id": "iguopin",
+          "name": "国聘网",
+          "homepage": "https://www.iguopin.com/",
+          "scopes": [
+            "campus",
+            "social",
+            "intern",
+            "unknown"
+          ],
+          "configured_live": true,
+          "kind": "aggregator",
+          "priority": 60,
+          "coverage": "经国聘发布且单位性质代码明确为央企/国企的校园、社会、实习及未标注岗位。",
+          "quality": "企业性质、招聘类型、地点、学历和薪资来自国聘列表；行业由企业行业字段保守归一化。"
+        },
+        {
+          "id": "ncss",
+          "name": "24365 国家大学生就业服务平台",
+          "homepage": "https://www.ncss.cn/",
+          "scopes": [
+            "campus",
+            "social",
+            "intern",
+            "unknown"
+          ],
+          "configured_live": true,
+          "kind": "aggregator",
+          "priority": 40,
+          "coverage": "24365 聚合列表中单位性质明确为央企/国企的岗位，以高校毕业生岗位为主。",
+          "quality": "仅保留 recProperty 明确为国有/央企/国企的记录；招聘类型只按明确文字推断，薪资按千元/月列表口径展示。"
+        },
+        {
+          "id": "sinopec",
+          "name": "中国石化官方社会招聘",
+          "homepage": "https://job.sinopec.com/",
+          "scopes": [
+            "social"
+          ],
+          "configured_live": false,
+          "kind": "official",
+          "priority": 100,
+          "coverage": "中国石化及所属单位官方社会招聘岗位；只读取 endTag=N 的当前在招列表。",
+          "disabled_reason": "官方接口与当前在招过滤已接通，但 2026-08 实测 endTag=N 为完整空列表；出现可验证真实岗位后再启用。",
+          "quality": "招聘主体、岗位、人数、地点、条件、薪资参考和截止时间来自中国石化官方接口；历史岗位不会混入实时结果。"
+        },
+        {
+          "id": "csg",
+          "name": "中国南方电网官方招聘（候选）",
+          "homepage": "https://zhaopin.csg.cn/",
+          "scopes": [
+            "campus",
+            "social"
+          ],
+          "configured_live": false,
+          "kind": "official",
+          "priority": 100,
+          "coverage": "南方电网及所属单位校园招聘、社会招聘。",
+          "disabled_reason": "公开游客认证和分页接口已验证，但当前校园/社会招聘均为完整空列表；出现可核验真实岗位后再启用。",
+          "quality": "候选源；不得把历史公告或空列表冒充当前在招岗位。"
+        }
+      ]
+    }
+  },
+  "plan": {
+    "schema": "guoyang-ai-query-plan/v1",
+    "createdAt": "2026-08-28T07:13:06.227Z",
+    "planningMode": "ai-directed",
+    "expansionVersion": "1.0.0",
+    "profile": {
+      "education": "硕士",
+      "major": "新闻传播",
+      "schoolTier": "985",
+      "locations": [
+        "四川"
+      ],
+      "sectors": [],
+      "recruitTypes": [
+        "校招"
+      ],
+      "keywords": [],
+      "excludeKeywords": [],
+      "acceptUnrestrictedMajor": true,
+      "acceptRelocation": false,
+      "maxQueries": 24,
+      "minimumResults": 15,
+      "resultLimitPerQuery": 30,
+      "scanLimit": 1500
+    },
+    "resolved": {
+      "sectors": [],
+      "recruitTypes": [
+        "campus"
+      ],
+      "originalLocations": [
+        "四川"
+      ],
+      "expandedLocations": [
+        "成都",
+        "绵阳",
+        "德阳",
+        "宜宾",
+        "泸州",
+        "南充",
+        "乐山",
+        "眉山",
+        "自贡",
+        "攀枝花",
+        "广元",
+        "遂宁",
+        "内江",
+        "广安",
+        "达州",
+        "雅安",
+        "巴中",
+        "资阳",
+        "阿坝",
+        "甘孜",
+        "凉山"
+      ],
+      "expandedLocationMap": {
+        "四川": [
+          "成都",
+          "绵阳",
+          "德阳",
+          "宜宾",
+          "泸州",
+          "南充",
+          "乐山",
+          "眉山",
+          "自贡",
+          "攀枝花",
+          "广元",
+          "遂宁",
+          "内江",
+          "广安",
+          "达州",
+          "雅安",
+          "巴中",
+          "资阳",
+          "阿坝",
+          "甘孜",
+          "凉山"
+        ]
+      },
+      "majorFamily": "journalism-communication",
+      "majorAliases": [
+        "新闻传播",
+        "新闻传播学类",
+        "新闻学",
+        "传播学",
+        "广告学",
+        "网络与新媒体",
+        "编辑出版学",
+        "国际新闻与传播",
+        "中国语言文学类"
+      ],
+      "roleKeywords": [
+        "宣传",
+        "品牌",
+        "内容运营",
+        "编辑",
+        "记者",
+        "新媒体",
+        "文案",
+        "融媒体",
+        "舆情",
+        "公关"
+      ],
+      "relatedSectors": [
+        "传媒文化",
+        "科技数字"
+      ]
+    },
+    "policy": {
+      "minimumRequiredStages": [],
+      "minimumResults": 15,
+      "maxQueries": 24,
+      "stopAtStageBoundary": false
+    },
+    "warnings": [
+      "未提供意向行业；查询不会限定行业",
+      "候选查询 44 条，已按 maxQueries=24 截断"
+    ],
+    "totalCandidateQueries": 44,
+    "truncated": true,
+    "queries": [
+      {
+        "id": "r1-major-news-communication-sichuan",
+        "stage": "direct-major",
+        "rationale": "验证四川校招中直接接受新闻传播专业且学历匹配的岗位。",
+        "hypothesis": "专业字段存在直接命中。",
+        "filters": {
+          "education": "硕士",
+          "major": "新闻传播",
+          "location": "四川",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--major",
+          "新闻传播",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      },
+      {
+        "id": "r1-major-journalism-sichuan",
+        "stage": "major-alias",
+        "rationale": "覆盖招聘公告将专业写成新闻学的情况。",
+        "hypothesis": "新闻学专业名会补充直接专业查询遗漏。",
+        "filters": {
+          "education": "硕士",
+          "major": "新闻学",
+          "location": "四川",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--major",
+          "新闻学",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      },
+      {
+        "id": "r1-major-communication-sichuan",
+        "stage": "major-alias",
+        "rationale": "覆盖招聘公告将专业写成传播学的情况。",
+        "hypothesis": "传播学专业名会补充直接专业查询遗漏。",
+        "filters": {
+          "education": "硕士",
+          "major": "传播学",
+          "location": "四川",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--major",
+          "传播学",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      },
+      {
+        "id": "r1-role-publicity-sichuan",
+        "stage": "role-hypothesis",
+        "rationale": "寻找宣传、党宣及企业文化传播相关岗位。",
+        "hypothesis": "国央企新闻传播岗位常以宣传命名。",
+        "filters": {
+          "education": "硕士",
+          "location": "四川",
+          "keyword": "宣传",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--keyword",
+          "宣传",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      },
+      {
+        "id": "r1-role-brand-sichuan",
+        "stage": "role-hypothesis",
+        "rationale": "寻找品牌传播、品牌管理及市场传播岗位。",
+        "hypothesis": "部分对口岗位以品牌而非新闻传播命名。",
+        "filters": {
+          "education": "硕士",
+          "location": "四川",
+          "keyword": "品牌",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--keyword",
+          "品牌",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      },
+      {
+        "id": "r1-role-new-media-sichuan",
+        "stage": "role-hypothesis",
+        "rationale": "寻找新媒体策划、运营与内容生产岗位。",
+        "hypothesis": "数字传播岗位会以新媒体命名。",
+        "filters": {
+          "education": "硕士",
+          "location": "四川",
+          "keyword": "新媒体",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--keyword",
+          "新媒体",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      },
+      {
+        "id": "r1-role-converged-media-sichuan",
+        "stage": "role-hypothesis",
+        "rationale": "寻找融媒体、全媒体及内容采编相关岗位。",
+        "hypothesis": "媒体机构和大型企业可能使用融媒体岗位名称。",
+        "filters": {
+          "education": "硕士",
+          "location": "四川",
+          "keyword": "融媒体",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--keyword",
+          "融媒体",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      },
+      {
+        "id": "r1-role-pr-sichuan",
+        "stage": "role-hypothesis",
+        "rationale": "寻找公共关系、舆情及对外传播相关岗位。",
+        "hypothesis": "企业传播职责可能归入公关岗位。",
+        "filters": {
+          "education": "硕士",
+          "location": "四川",
+          "keyword": "公关",
+          "recruitType": "campus"
+        },
+        "limit": 30,
+        "scanLimit": 1500,
+        "args": [
+          "search",
+          "--format",
+          "json",
+          "--education",
+          "硕士",
+          "--location",
+          "四川",
+          "--type",
+          "campus",
+          "--keyword",
+          "公关",
+          "--limit",
+          "30",
+          "--scan-limit",
+          "1500"
+        ]
+      }
+    ],
+    "strategy": {
+      "schema": "guoyang-search-strategy/v1",
+      "objective": "在四川范围内寻找面向硕士应届生的新闻传播对口及相邻职能校招岗位，并识别真实岗位命名。",
+      "approach": "首轮不限制行业，用专业原文、专业别名和差异明显的职责词分别检索；先验证专业字段直接命中，再比较宣传、品牌、新媒体、融媒体、公关等岗位词的增量。",
+      "hypotheses": [
+        "直接标注新闻传播专业的四川校招岗位较少，新闻学或传播学等专业别名可能补充命中",
+        "对口岗位更可能以宣传、品牌、新媒体、融媒体或公关命名，而非在标题中出现新闻传播",
+        "行业不限有利于发现制造、能源、基建及科技类国央企中的职能传播岗位"
+      ],
+      "stopCondition": "完成专业字段与五类职责词的探索；若去重岗位不足或岗位命名仍不清晰，再根据首轮企业与职责证据补充一轮。",
+      "iteration": 1
+    }
+  },
+  "strategies": [
+    {
+      "schema": "guoyang-search-strategy/v1",
+      "objective": "在四川范围内寻找面向硕士应届生的新闻传播对口及相邻职能校招岗位，并识别真实岗位命名。",
+      "approach": "首轮不限制行业，用专业原文、专业别名和差异明显的职责词分别检索；先验证专业字段直接命中，再比较宣传、品牌、新媒体、融媒体、公关等岗位词的增量。",
+      "hypotheses": [
+        "直接标注新闻传播专业的四川校招岗位较少，新闻学或传播学等专业别名可能补充命中",
+        "对口岗位更可能以宣传、品牌、新媒体、融媒体或公关命名，而非在标题中出现新闻传播",
+        "行业不限有利于发现制造、能源、基建及科技类国央企中的职能传播岗位"
+      ],
+      "stopCondition": "完成专业字段与五类职责词的探索；若去重岗位不足或岗位命名仍不清晰，再根据首轮企业与职责证据补充一轮。",
+      "iteration": 1
+    }
+  ],
+  "references": {
+    "enterprises": [
+      {
+        "ok": true,
+        "args": [
+          "enterprises",
+          "--sector",
+          "传媒文化",
+          "--limit",
+          "20",
+          "--format",
+          "json"
+        ],
+        "payload": {
+          "total": 0,
+          "enterprises": []
+        },
+        "startedAt": "2026-08-28T07:13:09.036Z",
+        "finishedAt": "2026-08-28T07:13:09.797Z"
+      },
+      {
+        "ok": true,
+        "args": [
+          "enterprises",
+          "--sector",
+          "科技数字",
+          "--limit",
+          "20",
+          "--format",
+          "json"
+        ],
+        "payload": {
+          "total": 3,
+          "enterprises": [
+            {
+              "id": "e3b962e",
+              "name": "中国电子信息产业集团有限公司",
+              "short": "中国电子",
+              "tier": "T1",
+              "sector": "科技数字",
+              "regulator": "国务院国资委",
+              "listed": "上市(中国软件600536、中国长城000066、深科技000021、南京熊猫600775、上海贝岭600171等)",
+              "hq": "深圳",
+              "aliases": [
+                "中国电子",
+                "CEC"
+              ],
+              "notes": "网信安全与基础软硬件(飞腾CPU/麒麟OS)国家队。信创主力;计算机/微电子/网络安全专业对口。深圳/北京布局。",
+              "source": "industrial"
+            },
+            {
+              "id": "ef4eabc",
+              "name": "中国煤炭科工集团有限公司",
+              "short": "中国煤科",
+              "tier": "T2",
+              "sector": "科技数字",
+              "regulator": "国务院国资委",
+              "listed": "上市(天地科技600582、天玛智控688215、创力集团603012)",
+              "notes": "煤炭行业科研与装备国家队(智能化采煤)。技术导向、稳定;机械/自动化/采矿/电气对口,院所多省分布。",
+              "source": "industrial"
+            },
+            {
+              "id": "ecfc086",
+              "name": "中国民航信息集团有限公司",
+              "short": "中航信",
+              "tier": "T2",
+              "sector": "科技数字",
+              "regulator": "国务院国资委",
+              "listed": "上市(中国民航信息网络00696)",
+              "hq": "北京",
+              "aliases": [
+                "中航信",
+                "航信",
+                "TravelSky"
+              ],
+              "notes": "民航旅客服务系统(订座/离港)垄断运营。IT平台稳定、技术含量高;计算机/软件/数据/通信对口,北京总部。",
+              "source": "industrial"
+            }
+          ]
+        },
+        "startedAt": "2026-08-28T07:13:09.797Z",
+        "finishedAt": "2026-08-28T07:13:10.488Z"
+      }
+    ],
+    "calendar": [
+      {
+        "ok": true,
+        "args": [
+          "calendar",
+          "--sector",
+          "传媒文化",
+          "--type",
+          "campus"
+        ],
+        "payload": {
+          "total": 0,
+          "note": "招聘时间线为典型规律参考,以各企业当年公告为准",
+          "entries": []
+        },
+        "startedAt": "2026-08-28T07:13:10.488Z",
+        "finishedAt": "2026-08-28T07:13:11.184Z"
+      },
+      {
+        "ok": true,
+        "args": [
+          "calendar",
+          "--sector",
+          "科技数字",
+          "--type",
+          "campus"
+        ],
+        "payload": {
+          "total": 0,
+          "note": "招聘时间线为典型规律参考,以各企业当年公告为准",
+          "entries": []
+        },
+        "startedAt": "2026-08-28T07:13:11.184Z",
+        "finishedAt": "2026-08-28T07:13:11.895Z"
+      }
+    ]
+  },
+  "execution": {
+    "stopReason": "已执行 AI 本轮选择的全部查询；是否继续由 AI 阅读结果后判断",
+    "planningMode": "ai-directed",
+    "strategy": {
+      "schema": "guoyang-search-strategy/v1",
+      "objective": "在四川范围内寻找面向硕士应届生的新闻传播对口及相邻职能校招岗位，并识别真实岗位命名。",
+      "approach": "首轮不限制行业，用专业原文、专业别名和差异明显的职责词分别检索；先验证专业字段直接命中，再比较宣传、品牌、新媒体、融媒体、公关等岗位词的增量。",
+      "hypotheses": [
+        "直接标注新闻传播专业的四川校招岗位较少，新闻学或传播学等专业别名可能补充命中",
+        "对口岗位更可能以宣传、品牌、新媒体、融媒体或公关命名，而非在标题中出现新闻传播",
+        "行业不限有利于发现制造、能源、基建及科技类国央企中的职能传播岗位"
+      ],
+      "stopCondition": "完成专业字段与五类职责词的探索；若去重岗位不足或岗位命名仍不清晰，再根据首轮企业与职责证据补充一轮。",
+      "iteration": 1
+    },
+    "sessionStartedAt": "2026-08-28T07:13:06.221Z",
+    "previousQueries": 0,
+    "currentPlannedQueries": 8,
+    "currentExecutedQueries": 8,
+    "currentSuccessfulQueries": 8,
+    "currentReturnedPositions": 0,
+    "currentNewPositions": 0,
+    "currentDistinctPositions": 0,
+    "plannedQueries": 8,
+    "executedQueries": 8,
+    "successfulQueries": 8,
+    "failedQueries": 0,
+    "skippedQueries": 0,
+    "completedStages": [
+      "direct-major",
+      "major-alias",
+      "role-hypothesis"
+    ]
+  },
+  "queryRuns": [
+    {
+      "queryId": "r1-major-news-communication-sichuan",
+      "stage": "direct-major",
+      "rationale": "验证四川校招中直接接受新闻传播专业且学历匹配的岗位。",
+      "hypothesis": "专业字段存在直接命中。",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻传播",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-major-news-communication-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:12.614Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1710,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:12.615Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 10,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:12.629Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:12.630Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:12.630Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:11.895Z",
+      "finishedAt": "2026-08-28T07:13:16.799Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    },
+    {
+      "queryId": "r1-major-journalism-sichuan",
+      "stage": "major-alias",
+      "rationale": "覆盖招聘公告将专业写成新闻学的情况。",
+      "hypothesis": "新闻学专业名会补充直接专业查询遗漏。",
+      "filters": {
+        "education": "硕士",
+        "major": "新闻学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-major-journalism-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:17.491Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1710,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:17.492Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 10,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:17.503Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:17.504Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:17.504Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:16.800Z",
+      "finishedAt": "2026-08-28T07:13:21.284Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    },
+    {
+      "queryId": "r1-major-communication-sichuan",
+      "stage": "major-alias",
+      "rationale": "覆盖招聘公告将专业写成传播学的情况。",
+      "hypothesis": "传播学专业名会补充直接专业查询遗漏。",
+      "filters": {
+        "education": "硕士",
+        "major": "传播学",
+        "location": "四川",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-major-communication-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:21.965Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1710,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:21.966Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 10,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:21.977Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:21.978Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:21.978Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:21.284Z",
+      "finishedAt": "2026-08-28T07:13:26.106Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    },
+    {
+      "queryId": "r1-role-publicity-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找宣传、党宣及企业文化传播相关岗位。",
+      "hypothesis": "国央企新闻传播岗位常以宣传命名。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "宣传",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-role-publicity-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:26.799Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1700,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:26.799Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 0,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:26.811Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:26.812Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:26.812Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:26.107Z",
+      "finishedAt": "2026-08-28T07:13:30.628Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    },
+    {
+      "queryId": "r1-role-brand-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找品牌传播、品牌管理及市场传播岗位。",
+      "hypothesis": "部分对口岗位以品牌而非新闻传播命名。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "品牌",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-role-brand-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:31.334Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1700,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:31.335Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 0,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:31.346Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:31.346Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:31.347Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:30.629Z",
+      "finishedAt": "2026-08-28T07:13:35.223Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    },
+    {
+      "queryId": "r1-role-new-media-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找新媒体策划、运营与内容生产岗位。",
+      "hypothesis": "数字传播岗位会以新媒体命名。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "新媒体",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-role-new-media-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:35.920Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1700,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:35.921Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 0,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:35.932Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:35.933Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:35.933Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:35.223Z",
+      "finishedAt": "2026-08-28T07:13:40.708Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    },
+    {
+      "queryId": "r1-role-converged-media-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找融媒体、全媒体及内容采编相关岗位。",
+      "hypothesis": "媒体机构和大型企业可能使用融媒体岗位名称。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "融媒体",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-role-converged-media-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:41.378Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1700,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:41.379Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 0,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:41.390Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:41.391Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:41.391Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:40.709Z",
+      "finishedAt": "2026-08-28T07:13:45.303Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    },
+    {
+      "queryId": "r1-role-pr-sichuan",
+      "stage": "role-hypothesis",
+      "rationale": "寻找公共关系、舆情及对外传播相关岗位。",
+      "hypothesis": "企业传播职责可能归入公关岗位。",
+      "filters": {
+        "education": "硕士",
+        "location": "四川",
+        "keyword": "公关",
+        "recruitType": "campus"
+      },
+      "limit": 30,
+      "scanLimit": 1500,
+      "rawFile": "raw/r1-role-pr-sichuan.json",
+      "ok": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "returned": 0,
+      "added": 0,
+      "data": {
+        "mode": "live",
+        "fetched_at": "2026-08-28T07:13:45.999Z",
+        "degraded": true,
+        "complete": false,
+        "scanned": 1700,
+        "sources": [
+          {
+            "id": "china-mobile",
+            "ok": true,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:46.000Z",
+            "note": "已扫描中国移动官方招聘列表；最终投递资格以官方详情页为准。"
+          },
+          {
+            "id": "cmb",
+            "ok": true,
+            "count": 0,
+            "scanned": 0,
+            "exhausted": true,
+            "truncated": false,
+            "fetched_at": "2026-08-28T07:13:46.011Z",
+            "note": "已扫描招商银行官方招聘各目标分区"
+          },
+          {
+            "id": "iguopin",
+            "ok": true,
+            "count": 0,
+            "scanned": 1500,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:46.012Z",
+            "note": "扫描达到上限 1500，结果可能不完整"
+          },
+          {
+            "id": "ncss",
+            "ok": false,
+            "count": 0,
+            "scanned": 100,
+            "exhausted": false,
+            "truncated": true,
+            "fetched_at": "2026-08-28T07:13:46.012Z",
+            "error": "unexpected response flag: false"
+          }
+        ],
+        "note": "结果来自实时扫描窗口；未扫到底时不能据此断言全源无更多岗位"
+      },
+      "startedAt": "2026-08-28T07:13:45.303Z",
+      "finishedAt": "2026-08-28T07:13:49.965Z",
+      "planningMode": "ai-directed",
+      "strategyIteration": 1
+    }
+  ],
+  "positions": []
+}
